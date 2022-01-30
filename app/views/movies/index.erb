@@ -1,0 +1,25 @@
+<h2>Results for <%= params[:search] %> </h2>
+
+<ul>
+<% @movies.each do |movie|%>
+    <li><%= link_to movie_show_path(movie.id) do %>
+        <div class="details">
+            <%= image_tag(movie.poster)%>
+            <div class="index">
+
+            <%= movie.title %>
+            (<%= movie.year %>)
+            <% end %><br>
+            <% movie.casts.each do |c| %>
+            <%= c.name %>
+            <% end %>
+            </div>
+
+        </div>
+
+        <hr>
+    <% end %>
+    </li>
+
+    
+</ul>

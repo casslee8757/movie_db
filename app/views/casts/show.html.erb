@@ -1,0 +1,13 @@
+<h1><%= @cast.name %></h1>
+
+<%= image_tag @cast.image %>
+
+<ul>
+<% @cast.movies.each do |d|%>
+
+<li>
+<%= link_to d.title, movie_show_path(d.id) %>
+</li>
+
+<% end %>
+</ul>

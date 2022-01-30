@@ -1,0 +1,9 @@
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+img {
+    width:150px;
+    height: auto;
+    border-radius: 5px;
+}

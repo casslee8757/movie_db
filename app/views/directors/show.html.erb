@@ -1,0 +1,8 @@
+<h1><%= @director.name %></h1>
+<%= image_tag @director.image %>
+
+<ul>
+<% @director.movies.each do |d|%>
+<li><%= link_to d.title, movie_show_path(d.id) %></li>
+<% end %>
+</ul>

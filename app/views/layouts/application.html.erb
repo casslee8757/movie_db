@@ -7,9 +7,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://kit.fontawesome.com/63e0a49b76.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
+    <nav>
+      <div class="navbar_logo">
+        <i class="fas fa-film"></i>
+        <%= link_to 'Search Movies', root_path %>
+      </div>
+    </nav>
+  
     <%= yield %>
   </body>
 </html>

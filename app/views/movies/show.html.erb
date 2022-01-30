@@ -1,0 +1,50 @@
+<h1>Details of movie </h1>
+
+<p>
+<%= image_tag @movie.poster %>
+</p>
+<h2><%= @movie.title %></h2>
+
+<p>
+<strong>Director:</strong>
+<%= link_to @movie.director.name, director_path(@movie.director) %>
+</p>
+
+<p>
+<strong>Casts:</strong>
+<ul>
+<% @movie.casts.each do |c|%>
+<li><%= link_to c.name, cast_path(c.id) %></li>
+<% end %>
+</ul>
+
+</p>
+
+
+<p>
+<strong>Release Year:</strong>
+<%= @movie.year %>
+
+</p>
+
+<p>
+<strong>Running Time :</strong>
+<%= @movie.time %>
+
+</p>
+
+<p>
+<strong>Overview</strong>
+<%= @movie.overview %>
+
+</p>
+
+<p>
+<strong>Rating</strong>
+<%= @movie.rating %>
+
+</p>
+
+
+
+<%= link_to "Add review", movie_show_path %>
