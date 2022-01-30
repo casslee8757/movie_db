@@ -7,7 +7,8 @@ m1 = Movie.create!(
     rating: 7.5,
     overview: "Docile housewife Thelma accompanies her pal Louise, an independent waitress, on a brief fishing trip. However, Louise kills a man who endeavours to rape Thelma at a bar. The two flee to Mexico.",
     poster: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBBtT5hQh85AWq3REjsh86p4NbWSY9Or2v5b9L-RKOe_XzwBa9",
-    trailer: "https://youtu.be/2iBFmKlO4BY"
+    trailer: "https://youtu.be/2iBFmKlO4BY",
+    movie_image: "https://watchcharge.s3.amazonaws.com/uploads/2018/05/t-and-l-banner.jpg"
 )
 
 m2 = Movie.create!(
@@ -17,7 +18,8 @@ m2 = Movie.create!(
     rating: 8.1,
     overview: "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence, only those who can conquer their own fear will survive.",
     poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvJznVehDbSUPihJbSTNwH8Tgnvh4ZDxs0J4hV06wOvHHidHul",
-    trailer: "https://youtu.be/8g18jFHCLXk"
+    trailer: "https://youtu.be/8g18jFHCLXk",
+    movie_image: "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/09/timothee-chalamet-ocean-dune-trailer.jpg?q=50&fit=crop&w=767&h=450&dpr=1.5"
 )
 
 m3 = Movie.create!(
@@ -27,7 +29,8 @@ m3 = Movie.create!(
     rating: 8.9,
     overview: "In the realm of underworld, a series of incidents intertwines the lives of two Los Angeles mobsters, a gangster's wife, a boxer and two small-time criminals.",
     poster: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTViAjqYaPH8rSNheAqd11PhVY9p7Ty7BrlSzmXfk5rBD3w8q3m",
-    trailer: "https://youtu.be/s7EdQ4FqbhY"
+    trailer: "https://youtu.be/s7EdQ4FqbhY",
+    movie_image: "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-28174-pulp-1800-1400682121.jpg"
 )
 
 m4 = Movie.create!(
@@ -37,7 +40,8 @@ m4 = Movie.create!(
     rating: 8.1,
     overview: "A pregnant assassin, code-named The Bride, goes into a coma for four years after her ex-boss Bill brutally attacks her. When she wakes up, she sets out to seek revenge on him and his associates.",
     poster: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT2n6mrijVjYMAFEQ1DUaKCp0P02YwVyzAO9Hf1ypNEPvsJk835",
-    trailer: "https://youtu.be/ZxJrdCIejus"
+    trailer: "https://youtu.be/ZxJrdCIejus",
+    movie_image: "https://cdn.onebauer.media/one/empire-tmdb/films/24/images/kkS8PKa8c134vXsj2fQkNqOaCXU.jpg?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill"
 )
 
 m5 = Movie.create!(
@@ -47,7 +51,8 @@ m5 = Movie.create!(
     rating: 8,
     overview: "A pregnant woman, codenamed the Bride, sets out on a journey to kill her ex-boss, Bill, and targets his brother, Budd, and Elle Driver, the only two survivors of the Deadly Vipers Assassination Squad.",
     poster: "https://m.media-amazon.com/images/M/MV5BNmFiYmJmN2QtNWQwMi00MzliLThiOWMtZjQxNGRhZTQ1MjgyXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_FMjpg_UX1000_.jpg",
-    trailer: "https://youtu.be/WTt8cCIvGYI"
+    trailer: "https://youtu.be/WTt8cCIvGYI",
+    movie_image: "https://images.mubicdn.net/images/film/1657/cache-47693-1553779330/image-w1280.jpg"
 )
 
 m6 = Movie.create!(
@@ -57,7 +62,8 @@ m6 = Movie.create!(
     rating: 8.3,
     overview: "A few Jewish soldiers are on an undercover mission to bring down the Nazi government and put an end to the war. Meanwhile, a woman wants to avenge the death of her family from a German officer.",
     poster: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQvl1IAwSys6SpV0QzocNFln0PQSwod5gBsdJRX5Tj98vwyFxal",
-    trailer: "https://youtu.be/eOcimzsviFA"
+    trailer: "https://youtu.be/eOcimzsviFA",
+    movie_image: "https://www.denofgeek.com/wp-content/uploads/2019/08/inglourious-basterds-pitt-roth.jpg?fit=1200%2C675"
 )
 
 m7 = Movie.create!(
@@ -67,7 +73,8 @@ m7 = Movie.create!(
     rating: 8.4,
     overview: "When Django, a slave, is freed, he joins forces with a bounty hunter to rescue his wife, who has been enslaved by Calvin, a hard-hearted plantation owner.",
     poster: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnm2FczCxSnt69XUZqqI5-sfy66SvjiV0du9mfUKRRCGqVAurt",
-    trailer: "https://youtu.be/0fUCuvNlOCg"
+    trailer: "https://youtu.be/0fUCuvNlOCg",
+    movie_image: "https://gmhslancerledger.com/wp-content/uploads/2020/06/4C226364-8674-4987-8D21-23C70A448FD5-900x606.jpeg"
 )
 
 m8 = Movie.create!(
@@ -77,7 +84,8 @@ m8 = Movie.create!(
     rating: 7.6,
     overview: "Rick, a washed-out actor, and Cliff, his stunt double, struggle to recapture fame and success in 1960s Los Angeles. Meanwhile, living next door to Rick is Sharon Tate and her husband Roman Polanski.",
     poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToswZe6sYekUbOf0TpjhYo64Z8P7x2x3zjT9XO2R_-2oXeX06Y",
-    trailer: "https://youtu.be/ELeMaP8EPAA"
+    trailer: "https://youtu.be/ELeMaP8EPAA",
+    movie_image: "https://whalebonemag.com/wp-content/uploads/2020/01/10201931153704-once-upon-a-time-in-hollywood-blu-ray.jpg"
 )
 
 m9 = Movie.create!(
@@ -87,7 +95,8 @@ m9 = Movie.create!(
     rating: 7.4,
     overview: "A flat tyre leaves Brad and Janet stranded on a stormy night. They experience strange incidents when they seek shelter in a nearby castle belonging to Frank-N-Furter, an eccentric transvestite.",
     poster: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSw4XUIY54oe7kXffs5aHPny8lz4v-j1A4XuLRC4ebfpHOHUfLL",
-    trailer: "https://youtu.be/bc80tFJpTuo"
+    trailer: "https://youtu.be/bc80tFJpTuo",
+    movie_image: "https://hollywoodsuite.ca/wp-content/uploads/Rocky-Horror-Social.jpg"
 )
 
 m10 = Movie.create!(
@@ -97,7 +106,8 @@ m10 = Movie.create!(
     rating: 7.5,
     overview: "Llewyn Davis, a former merchant marine, is a folk singer from Greenwich Village, New York City. He struggles to maintain his artistic independence against the commercial needs of the music industry.",
     poster: "https://m.media-amazon.com/images/M/MV5BMjAxNjcyNDQxM15BMl5BanBnXkFtZTgwNzU2NDA0MDE@._V1_.jpg",
-    trailer: "https://youtu.be/LFphYRyH7wc"
+    trailer: "https://youtu.be/LFphYRyH7wc",
+    movie_image: "https://s3.amazonaws.com/criterion-production/editorial_content_posts/hero/7033-/vzk0mGETFtNylaKJX2bHKP6snnwPQb_original.jpg"
 )
 
 m11 = Movie.create!(
@@ -107,7 +117,8 @@ m11 = Movie.create!(
     rating: 8.1,
     overview: "Jerry hires men to abduct his wife and use her to extract money from his father-in-law. Things do not go as planned and Jerry finds himself in big trouble.",
     poster: "https://flxt.tmsimg.com/assets/p17672_p_v13_au.jpg",
-    trailer: "https://youtu.be/h2tY82z3xXU"
+    trailer: "https://youtu.be/h2tY82z3xXU",
+    movie_image: "https://www.sensesofcinema.com/wp-content/uploads/2017/03/Cteq_Fargo-750x400.jpg"
 )
 
 m12 = Movie.create!(
@@ -117,7 +128,8 @@ m12 = Movie.create!(
     rating: 7.5,
     overview: "A flight attendant caught smuggling gun money has to choose between teaming up with the cops to bust her arms dealer boss or keeping her mouth shut and going to jail.",
     poster: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQu1nRd70jdhd9iaqbZCK8k8Xq0w02Pi-QioCiilZOODQakFcJE",
-    trailer: "https://youtu.be/G7HkBDNZV7s"
+    trailer: "https://youtu.be/G7HkBDNZV7s",
+    movie_image: "https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_0/f_auto,q_auto,w_1100/v1554992059/shape/mentalfloss/74608-miramax.jpg"
 )
 
 m13 = Movie.create!(
@@ -127,7 +139,8 @@ m13 = Movie.create!(
     rating: 7,
     overview: "Two gym employees chance upon a CD containing the memoirs of a CIA agent. They then decide to sell it back to him, failing which they plan to sell it to the Russian embassy.",
     poster: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSueapOLONrQnL75L8exYbizEdyeJ9cyCkwKbSivxXPsF1BcJWB",
-    trailer: "https://youtu.be/SVCHSiRWjJM"
+    trailer: "https://youtu.be/SVCHSiRWjJM",
+    movie_image: "http://flixwatcher.tv/wp-content/uploads/2020/09/Burn-After-Reading-Feature.jpg"
 )
 
 m14 = Movie.create!(
@@ -137,7 +150,8 @@ m14 = Movie.create!(
     rating: 8,
     overview: "K, an officer with the Los Angeles Police Department, unearths a secret that could create chaos. He goes in search of a former blade runner who has been missing for over three decades.",
     poster: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRPy3V6DD-NB3mNaObNlXqdE80zou2yK4Zk4xkq98vmKDI-6i3B",
-    trailer: "https://youtu.be/gCcx85zbxz4"
+    trailer: "https://youtu.be/gCcx85zbxz4",
+    movie_image: "https://www.indiewire.com/wp-content/uploads/2018/01/blade_runner_2049-png.jpeg?w=670&h=377&crop=1"
 )
 
 m15 = Movie.create!(
@@ -147,7 +161,8 @@ m15 = Movie.create!(
     rating: 7.5,
     overview: "When the deceased couple Adam and Barbara are unsuccessful in scaring away a family that has moved into their old home, they seek the help of bio-exorcist Betelgeuse",
     poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROrFxYYtTYX0_ZEc1ZDUF4S48_V6nVQJLd86MmGTnDepPJn_Te",
-    trailer: "https://youtu.be/ickbVzajrk0"
+    trailer: "https://youtu.be/ickbVzajrk0",
+    movie_image: "https://www.justwatch.com/images/backdrop/218100495/s640/betelgeuse"
 )
 
 

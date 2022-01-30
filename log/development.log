@@ -17004,3 +17004,1548 @@ Processing by MoviesController#show as HTML
 Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for ::1 at 2022-01-31 00:09:01 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:09:33 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:09:47 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:10:15 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:10:16 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:10:54 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:11:12 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:11:18 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:15:51 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&search=Dune&commit=Search" for ::1 at 2022-01-31 00:15:59 +1100
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Dune", "commit"=>"Search"}
+  Rendering movies/index.erb within layouts/application
+  [1m[36mMovie Load (2.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title LIKE '%Dune%')[0m
+  ↳ app/views/movies/index.erb:5
+  [1m[36mCast Load (3.2ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 199]]
+  ↳ app/views/movies/index.erb:14
+  Rendered movies/index.erb within layouts/application (12.6ms)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&search=Dune&commit=Search" for ::1 at 2022-01-31 00:16:22 +1100
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Dune", "commit"=>"Search"}
+  Rendering movies/index.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title LIKE '%Dune%')[0m
+  ↳ app/views/movies/index.erb:5
+  [1m[36mCast Load (0.9ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 199]]
+  ↳ app/views/movies/index.erb:14
+  Rendered movies/index.erb within layouts/application (5.5ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/199" for ::1 at 2022-01-31 00:16:25 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"199"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 199], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (1.7ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  [1m[36mCast Load (0.8ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 199]]
+  ↳ app/views/movies/show.html.erb:17
+  Rendered movies/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 3.0ms)
+
+
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6073794286097296920)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddMovieImageToMovies (20220130132200)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (22.8ms)[0m  [1m[35mALTER TABLE "movies" ADD "movie_image" text[0m
+  ↳ db/migrate/20220130132200_add_movie_image_to_movies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220130132200"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (2.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6073794286097296920)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.9ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 200]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 200]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 201]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 201]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 202]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 202]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 203]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 203]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 204]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 204]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 205]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 205]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 209]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 209]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.5ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 198]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 198]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 199]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 199]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 211]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 211]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.5ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 206]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 206]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 207]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 207]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 208]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 208]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 210]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 210]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mMovie::HABTM_Casts Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 212]]
+  ↳ db/seeds.rb:1
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 212]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Thelma & Louise"], ["year", 1991], ["time", "2h 9m"], ["overview", "Docile housewife Thelma accompanies her pal Louise, an independent waitress, on a brief fishing trip. However, Louise kills a man who endeavours to rape Thelma at a bar. The two flee to Mexico."], ["trailer", "https://youtu.be/2iBFmKlO4BY"], ["rating", 7.5], ["poster", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBBtT5hQh85AWq3REjsh86p4NbWSY9Or2v5b9L-RKOe_XzwBa9"], ["created_at", "2022-01-30 13:40:56.997468"], ["updated_at", "2022-01-30 13:40:56.997468"], ["movie_image", "https://watchcharge.s3.amazonaws.com/uploads/2018/05/t-and-l-banner.jpg"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Dune"], ["year", 2021], ["time", "2h 35m"], ["overview", "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence, only those who can conquer their own fear will survive."], ["trailer", "https://youtu.be/8g18jFHCLXk"], ["rating", 8.1], ["poster", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvJznVehDbSUPihJbSTNwH8Tgnvh4ZDxs0J4hV06wOvHHidHul"], ["created_at", "2022-01-30 13:40:57.003399"], ["updated_at", "2022-01-30 13:40:57.003399"], ["movie_image", "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/09/timothee-chalamet-ocean-dune-trailer.jpg?q=50&fit=crop&w=767&h=450&dpr=1.5"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Pulp Fiction"], ["year", 1994], ["time", "2h 34m"], ["overview", "In the realm of underworld, a series of incidents intertwines the lives of two Los Angeles mobsters, a gangster's wife, a boxer and two small-time criminals."], ["trailer", "https://youtu.be/s7EdQ4FqbhY"], ["rating", 8.9], ["poster", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTViAjqYaPH8rSNheAqd11PhVY9p7Ty7BrlSzmXfk5rBD3w8q3m"], ["created_at", "2022-01-30 13:40:57.007860"], ["updated_at", "2022-01-30 13:40:57.007860"], ["movie_image", "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-28174-pulp-1800-1400682121.jpg"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Kill Bill: Vol.1"], ["year", 2003], ["time", "1h 51m"], ["overview", "A pregnant assassin, code-named The Bride, goes into a coma for four years after her ex-boss Bill brutally attacks her. When she wakes up, she sets out to seek revenge on him and his associates."], ["trailer", "https://youtu.be/ZxJrdCIejus"], ["rating", 8.1], ["poster", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT2n6mrijVjYMAFEQ1DUaKCp0P02YwVyzAO9Hf1ypNEPvsJk835"], ["created_at", "2022-01-30 13:40:57.017615"], ["updated_at", "2022-01-30 13:40:57.017615"], ["movie_image", "https://cdn.onebauer.media/one/empire-tmdb/films/24/images/kkS8PKa8c134vXsj2fQkNqOaCXU.jpg?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Kill Bill: Vol.2"], ["year", 2004], ["time", "2h 17m"], ["overview", "A pregnant woman, codenamed the Bride, sets out on a journey to kill her ex-boss, Bill, and targets his brother, Budd, and Elle Driver, the only two survivors of the Deadly Vipers Assassination Squad."], ["trailer", "https://youtu.be/WTt8cCIvGYI"], ["rating", 8.0], ["poster", "https://m.media-amazon.com/images/M/MV5BNmFiYmJmN2QtNWQwMi00MzliLThiOWMtZjQxNGRhZTQ1MjgyXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_FMjpg_UX1000_.jpg"], ["created_at", "2022-01-30 13:40:57.020553"], ["updated_at", "2022-01-30 13:40:57.020553"], ["movie_image", "https://images.mubicdn.net/images/film/1657/cache-47693-1553779330/image-w1280.jpg"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Inglourious Basterds"], ["year", 2009], ["time", "2h 33m"], ["overview", "A few Jewish soldiers are on an undercover mission to bring down the Nazi government and put an end to the war. Meanwhile, a woman wants to avenge the death of her family from a German officer."], ["trailer", "https://youtu.be/eOcimzsviFA"], ["rating", 8.3], ["poster", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQvl1IAwSys6SpV0QzocNFln0PQSwod5gBsdJRX5Tj98vwyFxal"], ["created_at", "2022-01-30 13:40:57.023705"], ["updated_at", "2022-01-30 13:40:57.023705"], ["movie_image", "https://www.denofgeek.com/wp-content/uploads/2019/08/inglourious-basterds-pitt-roth.jpg?fit=1200%2C675"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Django Unchained"], ["year", 2012], ["time", "2h 45m"], ["overview", "When Django, a slave, is freed, he joins forces with a bounty hunter to rescue his wife, who has been enslaved by Calvin, a hard-hearted plantation owner."], ["trailer", "https://youtu.be/0fUCuvNlOCg"], ["rating", 8.4], ["poster", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnm2FczCxSnt69XUZqqI5-sfy66SvjiV0du9mfUKRRCGqVAurt"], ["created_at", "2022-01-30 13:40:57.027121"], ["updated_at", "2022-01-30 13:40:57.027121"], ["movie_image", "https://gmhslancerledger.com/wp-content/uploads/2020/06/4C226364-8674-4987-8D21-23C70A448FD5-900x606.jpeg"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Once Upon a Time in Hollywood"], ["year", 2019], ["time", "2h 51m"], ["overview", "Rick, a washed-out actor, and Cliff, his stunt double, struggle to recapture fame and success in 1960s Los Angeles. Meanwhile, living next door to Rick is Sharon Tate and her husband Roman Polanski."], ["trailer", "https://youtu.be/ELeMaP8EPAA"], ["rating", 7.6], ["poster", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToswZe6sYekUbOf0TpjhYo64Z8P7x2x3zjT9XO2R_-2oXeX06Y"], ["created_at", "2022-01-30 13:40:57.029790"], ["updated_at", "2022-01-30 13:40:57.029790"], ["movie_image", "https://whalebonemag.com/wp-content/uploads/2020/01/10201931153704-once-upon-a-time-in-hollywood-blu-ray.jpg"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "The Rocky Horror Picture Show"], ["year", 1975], ["time", "1h 40m"], ["overview", "A flat tyre leaves Brad and Janet stranded on a stormy night. They experience strange incidents when they seek shelter in a nearby castle belonging to Frank-N-Furter, an eccentric transvestite."], ["trailer", "https://youtu.be/bc80tFJpTuo"], ["rating", 7.4], ["poster", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSw4XUIY54oe7kXffs5aHPny8lz4v-j1A4XuLRC4ebfpHOHUfLL"], ["created_at", "2022-01-30 13:40:57.032406"], ["updated_at", "2022-01-30 13:40:57.032406"], ["movie_image", "https://hollywoodsuite.ca/wp-content/uploads/Rocky-Horror-Social.jpg"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:102
+  [1m[36mMovie Create (1.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Inside Llewyn Davis"], ["year", 2013], ["time", "1h 45m"], ["overview", "Llewyn Davis, a former merchant marine, is a folk singer from Greenwich Village, New York City. He struggles to maintain his artistic independence against the commercial needs of the music industry."], ["trailer", "https://youtu.be/LFphYRyH7wc"], ["rating", 7.5], ["poster", "https://m.media-amazon.com/images/M/MV5BMjAxNjcyNDQxM15BMl5BanBnXkFtZTgwNzU2NDA0MDE@._V1_.jpg"], ["created_at", "2022-01-30 13:40:57.035451"], ["updated_at", "2022-01-30 13:40:57.035451"], ["movie_image", "https://s3.amazonaws.com/criterion-production/editorial_content_posts/hero/7033-/vzk0mGETFtNylaKJX2bHKP6snnwPQb_original.jpg"]]
+  ↳ db/seeds.rb:102
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:102
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Fargo"], ["year", 1996], ["time", "1h 38m"], ["overview", "Jerry hires men to abduct his wife and use her to extract money from his father-in-law. Things do not go as planned and Jerry finds himself in big trouble."], ["trailer", "https://youtu.be/h2tY82z3xXU"], ["rating", 8.1], ["poster", "https://flxt.tmsimg.com/assets/p17672_p_v13_au.jpg"], ["created_at", "2022-01-30 13:40:57.039434"], ["updated_at", "2022-01-30 13:40:57.039434"], ["movie_image", "https://www.sensesofcinema.com/wp-content/uploads/2017/03/Cteq_Fargo-750x400.jpg"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:124
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Jackie Brown"], ["year", 1997], ["time", "2h 40m"], ["overview", "A flight attendant caught smuggling gun money has to choose between teaming up with the cops to bust her arms dealer boss or keeping her mouth shut and going to jail."], ["trailer", "https://youtu.be/G7HkBDNZV7s"], ["rating", 7.5], ["poster", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQu1nRd70jdhd9iaqbZCK8k8Xq0w02Pi-QioCiilZOODQakFcJE"], ["created_at", "2022-01-30 13:40:57.042486"], ["updated_at", "2022-01-30 13:40:57.042486"], ["movie_image", "https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_0/f_auto,q_auto,w_1100/v1554992059/shape/mentalfloss/74608-miramax.jpg"]]
+  ↳ db/seeds.rb:124
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:124
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:135
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Burn After Reading"], ["year", 2008], ["time", "1h 36m"], ["overview", "Two gym employees chance upon a CD containing the memoirs of a CIA agent. They then decide to sell it back to him, failing which they plan to sell it to the Russian embassy."], ["trailer", "https://youtu.be/SVCHSiRWjJM"], ["rating", 7.0], ["poster", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSueapOLONrQnL75L8exYbizEdyeJ9cyCkwKbSivxXPsF1BcJWB"], ["created_at", "2022-01-30 13:40:57.045316"], ["updated_at", "2022-01-30 13:40:57.045316"], ["movie_image", "http://flixwatcher.tv/wp-content/uploads/2020/09/Burn-After-Reading-Feature.jpg"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Blade Runner 2049"], ["year", 2017], ["time", "2h 43m"], ["overview", "K, an officer with the Los Angeles Police Department, unearths a secret that could create chaos. He goes in search of a former blade runner who has been missing for over three decades."], ["trailer", "https://youtu.be/gCcx85zbxz4"], ["rating", 8.0], ["poster", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRPy3V6DD-NB3mNaObNlXqdE80zou2yK4Zk4xkq98vmKDI-6i3B"], ["created_at", "2022-01-30 13:40:57.048891"], ["updated_at", "2022-01-30 13:40:57.048891"], ["movie_image", "https://www.indiewire.com/wp-content/uploads/2018/01/blade_runner_2049-png.jpeg?w=670&h=377&crop=1"]]
+  ↳ db/seeds.rb:146
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:157
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "time", "overview", "trailer", "rating", "poster", "created_at", "updated_at", "movie_image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Beetlejuice"], ["year", 1988], ["time", "1h 32m"], ["overview", "When the deceased couple Adam and Barbara are unsuccessful in scaring away a family that has moved into their old home, they seek the help of bio-exorcist Betelgeuse"], ["trailer", "https://youtu.be/ickbVzajrk0"], ["rating", 7.5], ["poster", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROrFxYYtTYX0_ZEc1ZDUF4S48_V6nVQJLd86MmGTnDepPJn_Te"], ["created_at", "2022-01-30 13:40:57.051610"], ["updated_at", "2022-01-30 13:40:57.051610"], ["movie_image", "https://www.justwatch.com/images/backdrop/218100495/s640/betelgeuse"]]
+  ↳ db/seeds.rb:157
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:157
+  [1m[36mDirector Load (1.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mDirector Destroy (0.4ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = $1[0m  [["id", 74]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mDirector Destroy (0.4ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = $1[0m  [["id", 75]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mDirector Destroy (0.3ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = $1[0m  [["id", 76]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mDirector Destroy (0.4ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = $1[0m  [["id", 77]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mDirector Destroy (0.5ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = $1[0m  [["id", 78]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mDirector Destroy (0.3ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = $1[0m  [["id", 79]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:173
+  [1m[36mDirector Create (0.6ms)[0m  [1m[32mINSERT INTO "directors" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Quentin Tarantino"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxlTrJvdxqSMBYf90USQe0qXEaMhXdy35FJOpUlEZ5PGl4wIBI"], ["created_at", "2022-01-30 13:40:57.083506"], ["updated_at", "2022-01-30 13:40:57.083506"]]
+  ↳ db/seeds.rb:173
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:173
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:175
+  [1m[36mDirector Create (0.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ridley Scott"], ["image", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTe8JR3OIgSR_IfAIeMk_f28jyuZxIFuAfe9q94l6-B8-20Rt4s"], ["created_at", "2022-01-30 13:40:57.086211"], ["updated_at", "2022-01-30 13:40:57.086211"]]
+  ↳ db/seeds.rb:175
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:175
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:177
+  [1m[36mDirector Create (0.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Denis Villeneuve"], ["image", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS7nswyZAURiZUpSmfvwHGCsIqxbBiaRlmeVHJ1CJz0wLdkwf6i"], ["created_at", "2022-01-30 13:40:57.088679"], ["updated_at", "2022-01-30 13:40:57.088679"]]
+  ↳ db/seeds.rb:177
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:177
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:179
+  [1m[36mDirector Create (0.5ms)[0m  [1m[32mINSERT INTO "directors" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jim Sharman"], ["image", "https://cdn.nzedge.com/wp-content/uploads/2015/09/richard_obrien26sept15.jpg"], ["created_at", "2022-01-30 13:40:57.091623"], ["updated_at", "2022-01-30 13:40:57.091623"]]
+  ↳ db/seeds.rb:179
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:179
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:181
+  [1m[36mDirector Create (0.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Joel Coen"], ["image", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSxadDdXZBH0q5N7FwM7vUxt_pad-1P_uFhDNvCS1xU1DkPR5I6"], ["created_at", "2022-01-30 13:40:57.094452"], ["updated_at", "2022-01-30 13:40:57.094452"]]
+  ↳ db/seeds.rb:181
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:181
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:183
+  [1m[36mDirector Create (0.6ms)[0m  [1m[32mINSERT INTO "directors" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tim Burton"], ["image", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQQQlLcVaEHbmHMKk9sMX8sxrx7sbpPeM0ZyUiysPh7SaAqWLK0"], ["created_at", "2022-01-30 13:40:57.096873"], ["updated_at", "2022-01-30 13:40:57.096873"]]
+  ↳ db/seeds.rb:183
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:183
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.105103"], ["director_id", 80], ["id", 215]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mMovie Update (0.4ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.108568"], ["director_id", 80], ["id", 216]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mMovie Update (0.4ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.111049"], ["director_id", 80], ["id", 217]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.114277"], ["director_id", 80], ["id", 218]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mMovie Update (0.6ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.117349"], ["director_id", 80], ["id", 219]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.120660"], ["director_id", 80], ["id", 220]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mMovie Update (0.8ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.123514"], ["director_id", 80], ["id", 224]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:192
+  [1m[36mMovie Update (0.4ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.127100"], ["director_id", 81], ["id", 213]]
+  ↳ db/seeds.rb:192
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:192
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:193
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.129910"], ["director_id", 82], ["id", 214]]
+  ↳ db/seeds.rb:193
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:193
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:193
+  [1m[36mMovie Update (0.4ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.132442"], ["director_id", 82], ["id", 226]]
+  ↳ db/seeds.rb:193
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:193
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:194
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.135028"], ["director_id", 83], ["id", 221]]
+  ↳ db/seeds.rb:194
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:194
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:195
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.138297"], ["director_id", 84], ["id", 222]]
+  ↳ db/seeds.rb:195
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:195
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:195
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.141277"], ["director_id", 84], ["id", 223]]
+  ↳ db/seeds.rb:195
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:195
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:195
+  [1m[36mMovie Update (0.5ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.144102"], ["director_id", 84], ["id", 225]]
+  ↳ db/seeds.rb:195
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:195
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:196
+  [1m[36mMovie Update (0.6ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1, "director_id" = $2 WHERE "movies"."id" = $3[0m  [["updated_at", "2022-01-30 13:40:57.147381"], ["director_id", 85], ["id", 227]]
+  ↳ db/seeds.rb:196
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:196
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ db/seeds.rb:200
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" ORDER BY "directors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:201
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" ORDER BY "directors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:201
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "movies"."title" FROM "movies" WHERE "movies"."director_id" = $1[0m  [["director_id", 80]]
+  ↳ db/seeds.rb:201
+  [1m[36mCast Load (2.7ms)[0m  [1m[34mSELECT "casts".* FROM "casts"[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 113]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.6ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 113]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 114]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 114]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 115]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 115]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 116]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 116]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 117]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 117]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 118]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 118]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 119]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 119]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.5ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 120]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 120]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 121]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.5ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 121]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 122]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 122]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 123]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 123]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 124]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 124]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 125]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 125]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 126]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 126]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.4ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 127]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.6ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 127]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:205
+  [1m[36mCast::HABTM_Movies Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts_movies" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 128]]
+  ↳ db/seeds.rb:205
+  [1m[36mCast Destroy (0.3ms)[0m  [1m[31mDELETE FROM "casts" WHERE "casts"."id" = $1[0m  [["id", 128]]
+  ↳ db/seeds.rb:205
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:205
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:207
+  [1m[36mCast Create (0.6ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Samuel L. Jackson"], ["image", "https://cdn.britannica.com/77/191077-004-21AEC627.jpg"], ["created_at", "2022-01-30 13:40:57.231096"], ["updated_at", "2022-01-30 13:40:57.231096"]]
+  ↳ db/seeds.rb:207
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:207
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:208
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Geena Davis"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlvcmYtTdZDOmU6OKuVjBzdHbf5OlJddjg-oNROR4ClgB1Ipnw"], ["created_at", "2022-01-30 13:40:57.233846"], ["updated_at", "2022-01-30 13:40:57.233846"]]
+  ↳ db/seeds.rb:208
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:208
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:209
+  [1m[36mCast Create (0.6ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Susan Sarandon"], ["image", "https://upload.wikimedia.org/wikipedia/commons/a/a1/Susan_Sarandon%2C_Festival_de_Sitges_2017_%28cropped%29.jpg"], ["created_at", "2022-01-30 13:40:57.236276"], ["updated_at", "2022-01-30 13:40:57.236276"]]
+  ↳ db/seeds.rb:209
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:209
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:210
+  [1m[36mCast Create (0.5ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Brad Pitt"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQJBntbqy_AhBhpkcGci8VP79LSwcheGgaj4BEeWLy9pUK3KOy7"], ["created_at", "2022-01-30 13:40:57.239797"], ["updated_at", "2022-01-30 13:40:57.239797"]]
+  ↳ db/seeds.rb:210
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:210
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:211
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Oscar Isaac"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNOzRGW1KgfkefLAR8TIk5KkXO5wmFOesHQhA49mrGodPT8JwK"], ["created_at", "2022-01-30 13:40:57.242613"], ["updated_at", "2022-01-30 13:40:57.242613"]]
+  ↳ db/seeds.rb:211
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:211
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:212
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zendaya"], ["image", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTPp7UQ5G0rhPhv6YmpJaW_10JHbxI7sdzcYIEQGTrVPxhBcxV9"], ["created_at", "2022-01-30 13:40:57.245220"], ["updated_at", "2022-01-30 13:40:57.245220"]]
+  ↳ db/seeds.rb:212
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:212
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:213
+  [1m[36mCast Create (0.5ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Uma Thurman"], ["image", "https://www.hollywoodreporter.com/wp-content/uploads/2014/03/uma_thurman_headshot_a_p.jpg"], ["created_at", "2022-01-30 13:40:57.247523"], ["updated_at", "2022-01-30 13:40:57.247523"]]
+  ↳ db/seeds.rb:213
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:213
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:214
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Michael Keaton"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRijC3a7kn4I9VST6H_fQbwzlgKGkBOK67L0wed8aEgWeOQIf-I"], ["created_at", "2022-01-30 13:40:57.250569"], ["updated_at", "2022-01-30 13:40:57.250569"]]
+  ↳ db/seeds.rb:214
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:214
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:215
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Michael Madsen"], ["image", "https://m.media-amazon.com/images/M/MV5BMTI4ODA5NzY2N15BMl5BanBnXkFtZTYwNjc3NTI1._V1_.jpg"], ["created_at", "2022-01-30 13:40:57.252962"], ["updated_at", "2022-01-30 13:40:57.252962"]]
+  ↳ db/seeds.rb:215
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:215
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:216
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Christoph Waltz"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRc7IDTuyu3Vs80Cty6bO_-78-QLOkp1TqcGVCrW_TPJIDgCLNN"], ["created_at", "2022-01-30 13:40:57.255399"], ["updated_at", "2022-01-30 13:40:57.255399"]]
+  ↳ db/seeds.rb:216
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:216
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:217
+  [1m[36mCast Create (0.6ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Leonardo DiCaprio"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2q9tvih6sHPAEEbPoCRrWpf2IWVG5IOo5jIxqCA7dgrggsQO5"], ["created_at", "2022-01-30 13:40:57.257834"], ["updated_at", "2022-01-30 13:40:57.257834"]]
+  ↳ db/seeds.rb:217
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:217
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:218
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tim Curry"], ["image", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT7O_DSeLhajBfzaAQobzva57s4aErOAlbRFS_POWdQTz9fMzXt"], ["created_at", "2022-01-30 13:40:57.261169"], ["updated_at", "2022-01-30 13:40:57.261169"]]
+  ↳ db/seeds.rb:218
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:218
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:219
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Frances McDormand"], ["image", "http://starsunfolded.com/wp-content/uploads/2018/03/Frances-McDormand.jpg"], ["created_at", "2022-01-30 13:40:57.263820"], ["updated_at", "2022-01-30 13:40:57.263820"]]
+  ↳ db/seeds.rb:219
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:219
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:220
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cate Blanchett"], ["image", "https://m.media-amazon.com/images/M/MV5BMTc1MDI0MDg1NV5BMl5BanBnXkFtZTgwMDM3OTAzMTE@._V1_.jpg"], ["created_at", "2022-01-30 13:40:57.266349"], ["updated_at", "2022-01-30 13:40:57.266349"]]
+  ↳ db/seeds.rb:220
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:220
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:221
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pam Grier"], ["image", "https://m.media-amazon.com/images/M/MV5BMTcxNDEwNDA0N15BMl5BanBnXkFtZTcwOTY1NjgyNA@@._V1_UY1200_CR89,0,630,1200_AL_.jpg"], ["created_at", "2022-01-30 13:40:57.268747"], ["updated_at", "2022-01-30 13:40:57.268747"]]
+  ↳ db/seeds.rb:221
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:221
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:222
+  [1m[36mCast Create (0.4ms)[0m  [1m[32mINSERT INTO "casts" ("name", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ana de Armas"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTDuNAYu6ypYuWx80Ou5HatGVPRJCx-ykZ7Tj24Ak_d4LxMUlkA"], ["created_at", "2022-01-30 13:40:57.272073"], ["updated_at", "2022-01-30 13:40:57.272073"]]
+  ↳ db/seeds.rb:222
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:222
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:229
+  [1m[36mMovie::HABTM_Casts Create (0.9ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 130], ["movie_id", 213]]
+  ↳ db/seeds.rb:229
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:229
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:229
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 131], ["movie_id", 213]]
+  ↳ db/seeds.rb:229
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:229
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:229
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 132], ["movie_id", 213]]
+  ↳ db/seeds.rb:229
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:229
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:229
+  [1m[36mMovie::HABTM_Casts Create (0.6ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 137], ["movie_id", 213]]
+  ↳ db/seeds.rb:229
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:229
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:230
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 133], ["movie_id", 214]]
+  ↳ db/seeds.rb:230
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:230
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:230
+  [1m[36mMovie::HABTM_Casts Create (0.3ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 134], ["movie_id", 214]]
+  ↳ db/seeds.rb:230
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:230
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:231
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 129], ["movie_id", 215]]
+  ↳ db/seeds.rb:231
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:231
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:231
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 135], ["movie_id", 215]]
+  ↳ db/seeds.rb:231
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:231
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:232
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 135], ["movie_id", 216]]
+  ↳ db/seeds.rb:232
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:232
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:232
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 137], ["movie_id", 216]]
+  ↳ db/seeds.rb:232
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:232
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:232
+  [1m[36mMovie::HABTM_Casts Create (0.3ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 129], ["movie_id", 216]]
+  ↳ db/seeds.rb:232
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:232
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:233
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 135], ["movie_id", 217]]
+  ↳ db/seeds.rb:233
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:233
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:233
+  [1m[36mMovie::HABTM_Casts Create (0.5ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 137], ["movie_id", 217]]
+  ↳ db/seeds.rb:233
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:233
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:233
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 129], ["movie_id", 217]]
+  ↳ db/seeds.rb:233
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:233
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:234
+  [1m[36mMovie::HABTM_Casts Create (0.5ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 138], ["movie_id", 218]]
+  ↳ db/seeds.rb:234
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:234
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:234
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 132], ["movie_id", 218]]
+  ↳ db/seeds.rb:234
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:234
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:235
+  [1m[36mMovie::HABTM_Casts Create (0.3ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 129], ["movie_id", 219]]
+  ↳ db/seeds.rb:235
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:235
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:235
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 138], ["movie_id", 219]]
+  ↳ db/seeds.rb:235
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:235
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:235
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 139], ["movie_id", 219]]
+  ↳ db/seeds.rb:235
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:235
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:236
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 132], ["movie_id", 220]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:236
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 139], ["movie_id", 220]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:236
+  [1m[36mMovie::HABTM_Casts Create (0.5ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 137], ["movie_id", 220]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:237
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 131], ["movie_id", 221]]
+  ↳ db/seeds.rb:237
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:237
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:237
+  [1m[36mMovie::HABTM_Casts Create (0.5ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 140], ["movie_id", 221]]
+  ↳ db/seeds.rb:237
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:237
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:238
+  [1m[36mMovie::HABTM_Casts Create (0.5ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 133], ["movie_id", 222]]
+  ↳ db/seeds.rb:238
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:238
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:239
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 141], ["movie_id", 223]]
+  ↳ db/seeds.rb:239
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:239
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:240
+  [1m[36mMovie::HABTM_Casts Create (0.3ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 143], ["movie_id", 224]]
+  ↳ db/seeds.rb:240
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:240
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:240
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 129], ["movie_id", 224]]
+  ↳ db/seeds.rb:240
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:240
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:240
+  [1m[36mMovie::HABTM_Casts Create (0.6ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 136], ["movie_id", 224]]
+  ↳ db/seeds.rb:240
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:240
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:241
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 141], ["movie_id", 225]]
+  ↳ db/seeds.rb:241
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:241
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:241
+  [1m[36mMovie::HABTM_Casts Create (0.3ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 132], ["movie_id", 225]]
+  ↳ db/seeds.rb:241
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:241
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:242
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 144], ["movie_id", 226]]
+  ↳ db/seeds.rb:242
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:242
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:243
+  [1m[36mMovie::HABTM_Casts Create (0.5ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 130], ["movie_id", 227]]
+  ↳ db/seeds.rb:243
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:243
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:243
+  [1m[36mMovie::HABTM_Casts Create (0.4ms)[0m  [1m[32mINSERT INTO "casts_movies" ("cast_id", "movie_id") VALUES ($1, $2) RETURNING "id"[0m  [["cast_id", 136], ["movie_id", 227]]
+  ↳ db/seeds.rb:243
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:243
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "movies"."title" FROM "movies" INNER JOIN "casts_movies" ON "movies"."id" = "casts_movies"."movie_id" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 135]]
+  ↳ db/seeds.rb:245
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "casts"."name" FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 223]]
+  ↳ db/seeds.rb:246
+Started GET "/movies/199" for ::1 at 2022-01-31 00:41:12 +1100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/cass/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"199"}
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 199], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+Completed 404 Not Found in 27ms (ActiveRecord: 14.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=199):
+  
+app/controllers/movies_controller.rb:20:in `show'
+Started GET "/movies?utf8=%E2%9C%93&search=Dune&commit=Search" for ::1 at 2022-01-31 00:42:00 +1100
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Dune", "commit"=>"Search"}
+  Rendering movies/index.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title LIKE '%Dune%')[0m
+  ↳ app/views/movies/index.erb:5
+  [1m[36mCast Load (1.7ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/index.erb:14
+  Rendered movies/index.erb within layouts/application (63.1ms)
+Completed 200 OK in 92ms (Views: 76.3ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:42:02 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.8ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  [1m[36mCast Load (0.9ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:17
+  Rendered movies/show.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 42ms (Views: 30.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:42:46 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.7ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 37.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:44:13 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (1.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 49ms (Views: 43.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:44:29 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (9.7ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.8ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 67ms (Views: 52.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:46:48 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.7ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 53ms (Views: 46.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:46:57 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.7ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (1.7ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 47ms (Views: 35.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:46:59 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.6ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:47:08 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.9ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:47:14 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.6ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.6ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 38.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/casts/133" for ::1 at 2022-01-31 00:47:29 +1100
+Processing by CastsController#show as HTML
+  Parameters: {"id"=>"133"}
+  [1m[36mCast Load (0.5ms)[0m  [1m[34mSELECT  "casts".* FROM "casts" WHERE "casts"."id" = $1 LIMIT $2[0m  [["id", 133], ["LIMIT", 1]]
+  ↳ app/controllers/casts_controller.rb:4
+  Rendering casts/show.html.erb within layouts/application
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "casts_movies" ON "movies"."id" = "casts_movies"."movie_id" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 133]]
+  ↳ app/views/casts/show.html.erb:5
+  Rendered casts/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 20.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/222" for ::1 at 2022-01-31 00:47:30 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (1.3ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 222]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 25ms (Views: 19.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/movies/222" for ::1 at 2022-01-31 00:48:52 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (1.0ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 222]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 60ms (Views: 53.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/movies/222" for ::1 at 2022-01-31 00:49:13 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.3ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 222]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/222" for ::1 at 2022-01-31 00:49:15 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.3ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 222]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/222" for ::1 at 2022-01-31 00:49:36 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 222]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/222" for ::1 at 2022-01-31 00:50:25 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.5ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 222]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/222" for ::1 at 2022-01-31 00:50:43 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 222]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:52:10 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/directors/82" for ::1 at 2022-01-31 00:52:54 +1100
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:4
+  Rendering directors/show.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."director_id" = $1[0m  [["director_id", 82]]
+  ↳ app/views/directors/show.html.erb:7
+  Rendered directors/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/directors/82" for ::1 at 2022-01-31 00:53:38 +1100
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:4
+  Rendering directors/show.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."director_id" = $1[0m  [["director_id", 82]]
+  ↳ app/views/directors/show.html.erb:7
+  Rendered directors/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:54:40 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.5ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:55:55 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (3.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.8ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 56ms (Views: 47.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:56:34 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (1.9ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:56:46 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.6ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:56:54 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (3.5ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 49ms (Views: 38.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:57:07 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.9ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:57:21 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (2.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.7ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (1.0ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 55ms (Views: 47.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:57:37 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/214" for ::1 at 2022-01-31 00:57:39 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 214]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/directors/82" for ::1 at 2022-01-31 00:57:54 +1100
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/directors_controller.rb:4
+  Rendering directors/show.html.erb within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."director_id" = $1[0m  [["director_id", 82]]
+  ↳ app/views/directors/show.html.erb:7
+  Rendered directors/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies/226" for ::1 at 2022-01-31 00:57:56 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"226"}
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.3ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 226]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/226" for ::1 at 2022-01-31 00:58:21 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"226"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.9ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 226]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 28.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/226" for ::1 at 2022-01-31 00:58:23 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"226"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 226]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/226" for ::1 at 2022-01-31 00:58:48 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"226"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.3ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 226]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/226" for ::1 at 2022-01-31 00:58:59 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"226"}
+  [1m[36mMovie Load (4.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.3ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 226]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 69ms (Views: 60.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2022-01-31 00:59:26 +1100
+Processing by MoviesController#home as HTML
+  Rendering movies/home.html.erb within layouts/application
+  Rendered movies/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&search=Thelma&commit=Search" for ::1 at 2022-01-31 00:59:30 +1100
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Thelma", "commit"=>"Search"}
+  Rendering movies/index.erb within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE (title LIKE '%Thelma%')[0m
+  ↳ app/views/movies/index.erb:5
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 213]]
+  ↳ app/views/movies/index.erb:14
+  Rendered movies/index.erb within layouts/application (4.6ms)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/213" for ::1 at 2022-01-31 00:59:33 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"213"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.3ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 213]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/casts/130" for ::1 at 2022-01-31 01:01:06 +1100
+Processing by CastsController#show as HTML
+  Parameters: {"id"=>"130"}
+  [1m[36mCast Load (0.5ms)[0m  [1m[34mSELECT  "casts".* FROM "casts" WHERE "casts"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  ↳ app/controllers/casts_controller.rb:4
+  Rendering casts/show.html.erb within layouts/application
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "casts_movies" ON "movies"."id" = "casts_movies"."movie_id" WHERE "casts_movies"."cast_id" = $1[0m  [["cast_id", 130]]
+  ↳ app/views/casts/show.html.erb:5
+  Rendered casts/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/213" for ::1 at 2022-01-31 01:02:14 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"213"}
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (1.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (15.5ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 213]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 64ms (Views: 41.1ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/movies/213" for ::1 at 2022-01-31 01:02:28 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"213"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.4ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 213]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies/213" for ::1 at 2022-01-31 01:02:38 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"213"}
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:20
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:12
+  [1m[36mCast Load (0.5ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 213]]
+  ↳ app/views/movies/show.html.erb:19
+  Rendered movies/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 1.5ms)
+
+

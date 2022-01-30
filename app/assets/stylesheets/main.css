@@ -11,7 +11,18 @@ img {
     border-radius: 5px;
 }
 
-.index_container {
-    margin: 10%;
-    background-color: white;
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #979f9d;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+.home_link{
+    text-decoration: none;
+    color: white;
 }
