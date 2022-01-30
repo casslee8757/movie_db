@@ -1,13 +1,13 @@
-<h1><%= @cast.name %></h1>
+<div class="index_container">
+    <h1><%= @cast.name %></h1>
+    <%= image_tag @cast.image %>
+    <ul>
+    <% @cast.movies.each do |d|%>
+    <li>
+    <%= link_to d.title, movie_show_path(d.id) %>
+    </li>
 
-<%= image_tag @cast.image %>
+    <% end %>
+    </ul>
 
-<ul>
-<% @cast.movies.each do |d|%>
-
-<li>
-<%= link_to d.title, movie_show_path(d.id) %>
-</li>
-
-<% end %>
-</ul>
+</div>

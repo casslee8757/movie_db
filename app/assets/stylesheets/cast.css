@@ -1,0 +1,12 @@
+.cast_thumbnail {
+    width : 80px;
+}
+
+.cast_list {
+    display:flex;
+    flex-direction: row;
+}
+
+.cast_list2 {
+    padding: 30px;
+}

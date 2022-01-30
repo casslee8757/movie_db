@@ -9,14 +9,19 @@
     <%= javascript_include_tag 'application' %>
     <script src="https://kit.fontawesome.com/63e0a49b76.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
   </head>
 
   <body>
-    <nav>
+    <nav class ="navbar">
       <div class="navbar_logo">
-        <i class="fas fa-film"></i>
-        <%= link_to 'Search Movies', root_path %>
+        <span class="fas fa-film"></span>
+        <%= link_to 'Search Movies', root_path, :class => 'home_link' %>
+      </div>
+      <div class="navbar_menu">
+        <%= link_to 'Log in', :class => 'home_link' %>
+        <%= link_to 'sign up', :class => 'home_link' %>
       </div>
     </nav>
   

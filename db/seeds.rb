@@ -141,7 +141,7 @@ m14 = Movie.create!(
 )
 
 m15 = Movie.create!(
-    title: "BEETLEJUICE",
+    title: "Beetlejuice",
     year: 1988,
     time: "1h 32m",
     rating: 7.5,
@@ -159,7 +159,7 @@ d1 = Director.create! name: 'Quentin Tarantino', image: 'https://encrypted-tbn0.
 
 d2 = Director.create! name: 'Ridley Scott', image: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTe8JR3OIgSR_IfAIeMk_f28jyuZxIFuAfe9q94l6-B8-20Rt4s'
 
-d3 = Director.create! name: 'Denis Villeneuve', image: 'https://cdnntr1.img.sputniknews.com/img/07e5/09/13/1049032625_218:0:781:563_1920x0_80_0_0_17316bf87af470e2a931f2559da89d7b.jpg'
+d3 = Director.create! name: 'Denis Villeneuve', image: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS7nswyZAURiZUpSmfvwHGCsIqxbBiaRlmeVHJ1CJz0wLdkwf6i'
 
 d4 = Director.create! name: 'Jim Sharman', image: 'https://cdn.nzedge.com/wp-content/uploads/2015/09/richard_obrien26sept15.jpg'
 
@@ -192,7 +192,7 @@ Cast.destroy_all
 c1 = Cast.create! name: 'Samuel L. Jackson', image: 'https://cdn.britannica.com/77/191077-004-21AEC627.jpg'
 c2 = Cast.create! name: 'Geena Davis', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlvcmYtTdZDOmU6OKuVjBzdHbf5OlJddjg-oNROR4ClgB1Ipnw'
 c3 = Cast.create! name: 'Susan Sarandon', image: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Susan_Sarandon%2C_Festival_de_Sitges_2017_%28cropped%29.jpg'
-c4 = Cast.create! name: 'Brad Pitt', image: 'https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000/m/0d2f/313d/73c9/143a/6875/d46e/d976/bb81/2b1d/b017/b017.jpg'
+c4 = Cast.create! name: 'Brad Pitt', image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQJBntbqy_AhBhpkcGci8VP79LSwcheGgaj4BEeWLy9pUK3KOy7'
 c5 = Cast.create! name: 'Oscar Isaac', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNOzRGW1KgfkefLAR8TIk5KkXO5wmFOesHQhA49mrGodPT8JwK'
 c6 = Cast.create! name: 'Zendaya', image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTPp7UQ5G0rhPhv6YmpJaW_10JHbxI7sdzcYIEQGTrVPxhBcxV9'
 c7 = Cast.create! name: 'Uma Thurman', image: 'https://www.hollywoodreporter.com/wp-content/uploads/2014/03/uma_thurman_headshot_a_p.jpg'

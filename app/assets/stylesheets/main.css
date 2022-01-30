@@ -1,9 +1,17 @@
+
+
 * {
     font-family: 'Noto Sans', sans-serif;
+    margin: 0;
 }
 
 img {
     width:150px;
     height: auto;
     border-radius: 5px;
+}
+
+.index_container {
+    margin: 10%;
+    background-color: white;
 }

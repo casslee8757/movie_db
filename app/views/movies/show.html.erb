@@ -1,50 +1,60 @@
-<h1>Details of movie </h1>
+<div class="index_container">
+    <h2><%= @movie.title %></h2>
 
-<p>
-<%= image_tag @movie.poster %>
-</p>
-<h2><%= @movie.title %></h2>
+    <p>
+    <%= image_tag @movie.poster %>
+    </p>
+    <hr>
+    <p>
+    <strong>Director:</strong>
+    <%= link_to @movie.director.name, director_path(@movie.director) %>
+    </p>
+    <hr>
+    <p>
+    
+    <strong>Casts:</strong>
+    <div class="cast_list">
+        <% @movie.casts.each do |c|%>
+        <%= link_to cast_path(c.id) do %>
+        <div class="cast_list2">
+            <%= image_tag(c.image, :class => 'cast_thumbnail') %><br>
+            <%= c.name %>
+            <% end %>
+            </div>
+        <% end %>
+        
+        </p>
+    </div>
 
-<p>
-<strong>Director:</strong>
-<%= link_to @movie.director.name, director_path(@movie.director) %>
-</p>
+    <hr>
 
-<p>
-<strong>Casts:</strong>
-<ul>
-<% @movie.casts.each do |c|%>
-<li><%= link_to c.name, cast_path(c.id) %></li>
-<% end %>
-</ul>
+    <p>
+    <h2>Movie Info</h2>
+    <strong>Release Year:</strong>
+    <%= @movie.year %>
 
-</p>
+    </p>
 
+    <p>
+    <strong>Running Time :</strong>
+    <%= @movie.time %>
 
-<p>
-<strong>Release Year:</strong>
-<%= @movie.year %>
+    </p>
 
-</p>
+    <p>
+    <strong>Overview</strong><br>
+    <%= @movie.overview %>
 
-<p>
-<strong>Running Time :</strong>
-<%= @movie.time %>
+    </p>
 
-</p>
+    <p>
+    <stro>Rating:</stro ng>
+    <%= @movie.rating %>
 
-<p>
-<strong>Overview</strong>
-<%= @movie.overview %>
-
-</p>
-
-<p>
-<strong>Rating</strong>
-<%= @movie.rating %>
-
-</p>
+    </p>
 
 
 
-<%= link_to "Add review", movie_show_path %>
+    <%= link_to "Add review", movie_show_path %>
+
+</div>

@@ -1,15 +1,15 @@
-<div class="home">
+<div class="home_container">
+    <div class="home">
 
+        <h3>Search your movie</h3><br>
 
-<h3>Search your movie</h3><br>
+        <%= form_tag movie_path, :method => 'get', :action => 'movie_path' do %>
+            <%= text_field_tag(:search, params[:search], placeholder: "Search by Title")%>
+            <span class="fas fa-search"></span>
+            
+            <%= submit_tag "Search", :class => 'submit' %>
+        <% end %>
 
-
-<%= form_tag movie_path, :method => 'get', :action => 'movie_path' do %>
-    <%= text_field_tag(:search, params[:search], placeholder: "Search by Title")%>
-    <span class="fas fa-search"></span>
-    
-    <%= submit_tag "Search", :class => 'submit' %>
-<% end %>
-
+    </div>
 </div>
 

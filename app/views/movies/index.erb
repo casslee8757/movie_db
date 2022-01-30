@@ -1,6 +1,7 @@
-<h2>Results for <%= params[:search] %> </h2>
+<div class="index_container">
 
-<ul>
+<h2>Results for <%= params[:search] %> </h2>
+<ul class ="index_ul">
 <% @movies.each do |movie|%>
     <li><%= link_to movie_show_path(movie.id) do %>
         <div class="details">
@@ -10,8 +11,8 @@
             <%= movie.title %>
             (<%= movie.year %>)
             <% end %><br>
-            <% movie.casts.each do |c| %>
-            <%= c.name %>
+            <% movie.casts.each do |c| %>|
+            <%= c.name %>|
             <% end %>
             </div>
 
@@ -20,6 +21,6 @@
         <hr>
     <% end %>
     </li>
-
-    
 </ul>
+
+</div>
