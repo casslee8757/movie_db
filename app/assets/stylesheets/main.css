@@ -1,8 +1,8 @@
 
-
 * {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
+    /* text-align: center; */
 }
 
 img {
@@ -10,8 +10,6 @@ img {
     height: auto;
     border-radius: 5px;
 }
-
-
 
 .navbar {
     display: flex;
@@ -26,3 +24,23 @@ img {
     text-decoration: none;
     color: white;
 }
+
+.nav_font {
+    color: white;
+}
+
+
+.show_container {
+    margin: 20%;
+    margin-top: 5%;
+    background-color: rgb(242, 244, 244);
+    padding: 3% 5% 5% 5%;
+    
+}
+
+.index_container {
+    margin: 10%;
+    background-color: white;
+}
+
+

@@ -20,8 +20,17 @@
         <%= link_to 'Search Movies', root_path, :class => 'home_link' %>
       </div>
       <div class="navbar_menu">
-        <%= link_to 'Log in', :class => 'home_link' %>
-        <%= link_to 'sign up', :class => 'home_link' %>
+        <% if @current_user.present? %>
+          <span class= "nav_font"> Welcome, <%= @current_user.name %></span>
+          |
+          <%= link_to 'Log out', login_path, method: 'delete', :class => 'home_link' %>
+          
+          <% else %>
+          <%= link_to 'Log in', login_path, :class => 'home_link' %>
+          |
+          <%= link_to 'Sign up', login_path, :class => 'home_link' %>
+          
+        <% end %>
       </div>
     </nav>
   

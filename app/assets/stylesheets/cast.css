@@ -1,12 +1,27 @@
 .cast_thumbnail {
     width : 80px;
+    height: 110px;
 }
 
 .cast_list {
     display:flex;
     flex-direction: row;
+    justify-content: center;
+
 }
 
 .cast_list2 {
-    padding: 30px;
+    padding: 0 30px 0 30px;
+    width: 80px;
+    text-align: center;
+}
+
+.cast_list2 a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.cast_list2 a:hover {
+    color: gray;
 }

@@ -89,11 +89,13 @@ hr {
     text-decoration: none;
     color: black;
     font-size: 30px;
+    
 }
 
 .index_ul li a:hover {
-    color: rgb(75, 74, 74);
+    color: rgb(94, 93, 93);
 }
+
 
 .details {
     margin-left: 30px;
@@ -117,17 +119,49 @@ hr {
     width:100%;
 }
 
-.show_container {
-    margin: 20%;
-    margin-top: 5%;
-    background-color: rgb(242, 244, 244);
-    padding: 3% 5% 5% 5%;
+#index_name {
+    display: inline-block;
+    color: gray
+}
+
+.index_image {
+    transition: 0.5s;
     
 }
 
-.index_container {
-    margin: 10%;
-    background-color: white;
+.index_image:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+
 }
 
+.movie_small_image {
+    width: 100px;
+}
 
+.show_title {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h2 {
+text-align: center;
+font-size: 40px;
+}
+
+#show_text {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(85, 84, 84);
+    
+}
+
+.movie_info {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#overview {
+    font-size: 20px;
+    font-weight: bolder;
+}

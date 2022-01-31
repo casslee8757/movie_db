@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   get '/movies/new' => 'movies#new', as:'new_movie'
   post '/movies' => 'movies#create'
 
@@ -21,5 +20,11 @@ Rails.application.routes.draw do
  #########################
 
   get '/casts/:id' => 'casts#show', as: 'cast'
+
+  ################################
+
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
   
 end

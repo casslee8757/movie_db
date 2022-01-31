@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
 
     @movies = Movie.search params[:search]
     
+    
   end
 
   def show

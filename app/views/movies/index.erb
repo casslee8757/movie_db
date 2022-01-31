@@ -1,26 +1,28 @@
-<div class="index_container">
+<div class="show_container">
 
-<h2>Results for <%= params[:search] %> </h2>
-<ul class ="index_ul">
-<% @movies.each do |movie|%>
-    <li><%= link_to movie_show_path(movie.id) do %>
-        <div class="details">
-            <%= image_tag(movie.poster)%>
-            <div class="index">
+    <h2>Results for <%= params[:search] %> </h2>
+    <br>
+    <ul class ="index_ul">
+    <% @movies.each do |movie|%>
+        <li><%= link_to movie_show_path(movie.id) do %>
+            <div class="details">
+                <%= image_tag(movie.poster, :class => 'index_image')%>
+                <div class="index">
+                    <%= movie.title %>
+                    (<%= movie.year %>)
+                <% end %><br>
+                <% movie.casts.each do |c| %>
+                
+                <p id="index_name"><%= c.name %>|</p>
+                
+                <% end %>
+                </div>
 
-            <%= movie.title %>
-            (<%= movie.year %>)
-            <% end %><br>
-            <% movie.casts.each do |c| %>|
-            <%= c.name %>|
-            <% end %>
             </div>
 
-        </div>
-
-        <hr>
-    <% end %>
-    </li>
-</ul>
+            <hr>
+        <% end %>
+        </li>
+    </ul>
 
 </div>
