@@ -1,6 +1,8 @@
 <div class="show_container">
     <h1><%= @cast.name %></h1>
+    <hr>
     <%= image_tag @cast.image %>
+    <hr>
     <ul>
     <% @cast.movies.each do |d|%>
     <li>

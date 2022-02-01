@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     def check_if_logged_in
 
         unless @current_user.present?
-            flash[:error] = 'You must be logged in to '
+            flash[:error] = 'You must be logged in to write a review'
             redirect_to login_path
         end
     end

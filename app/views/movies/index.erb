@@ -1,7 +1,9 @@
 <div class="show_container">
 
     <h2>Results for <%= params[:search] %> </h2>
-    <br>
+
+    <hr>
+    
     <ul class ="index_ul">
     <% @movies.each do |movie|%>
         <li><%= link_to movie_show_path(movie.id) do %>

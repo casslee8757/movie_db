@@ -3,8 +3,8 @@
     <%= image_tag @movie.movie_image, :class => 'movie_big_image' %>
     <hr>
 
-<h2><%= @movie.title %></h2>
-<hr>
+    <h2><%= @movie.title %></h2>
+    <hr>
     <div class="show_title">
         <p id= "show_text">Poster <br><br>
         <%= image_tag @movie.poster, :class => 'movie_small_image' %>
@@ -18,7 +18,7 @@
     <hr>
 
     <p>
-    <strong>Director:</strong><br>
+    <strong>Director</strong><br><br>
 
     <div class="cast_list">
         <div class="cast_list2">
@@ -31,7 +31,7 @@
     <hr>
 
     <p>
-    <strong>Casts:</strong>
+    <strong>Casts</strong><br><br>
     <div class="cast_list">
         <% @movie.casts.each do |c|%>
         <%= link_to cast_path(c.id) do %>
@@ -68,7 +68,7 @@
 
     </div>
     <br>
-    <p>
+    <p id ="overview_text">
     <span id="overview">Overview:</span><br>
     <%= @movie.overview %>
 
@@ -76,18 +76,35 @@
 
     <hr>
 
-    <%= link_to "Add review" %>
+    <% if @current_user.present? %>
+        <%= link_to new_review_path, :class => 'review_link' do  %>
+            <i class="fas fa-pen"></i><br>
+            Add review
+        <% end %>
+        <%= render partial: 'reviews/form' %>
+    <% else %>
+        <%= link_to 'Please log in to write a review', login_path, :class => 'review_login' %>
+
+    <% end %>
 
     <hr>
 
-<ul>
-    <% @movie.reviews.each do |r|%>
-    <li><%= r.content %><br>
-    <%= r.user.name %>
 
-    <% end %>
-    <li>
-    </ul>
+    <h2>User reviews</h2>
+    <div class="review_content">
+    <ul>
 
+        <% @movie.reviews.each do |r|%>
+            <li><%= r.content %><br><br>
+            <%= r.user.name %>
+            <% if @current_user.present? && r.user_id == @current_user.id %>
+                <%= link_to 'Edit' %>
+            <% end %>
+
+        <hr>
+        <% end %>
+        </li>
+        </ul>
+        </div>
 
 </div>

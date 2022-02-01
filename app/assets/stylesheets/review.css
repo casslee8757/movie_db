@@ -1,0 +1,44 @@
+.review_content {
+   
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 7%;
+}
+
+.review_content ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.review_content ul li {
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+
+.review_box {
+    padding: 0 50% 50% 0;
+    text-align: left;
+}
+
+.review_login {
+    text-decoration: none;
+    color: rgb(173, 173, 173)
+}
+
+.review_login:hover {
+    color: gray;
+}
+
+.review_link {
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+    
+}
+
+.review_link:hover {
+    text-decoration: none;
+    color: rgb(158, 156, 156);
+    
+}

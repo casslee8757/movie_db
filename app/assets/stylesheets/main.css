@@ -2,7 +2,7 @@
 * {
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
-    /* text-align: center; */
+    text-align: center;
 }
 
 img {
@@ -43,4 +43,6 @@ img {
     background-color: white;
 }
 
-
+input {
+    text-align: left;
+}
