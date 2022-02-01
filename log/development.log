@@ -35349,3 +35349,32 @@ Processing by MoviesController#show as HTML
 Completed 200 OK in 56ms (Views: 40.9ms | ActiveRecord: 11.5ms)
 
 
+Started GET "/movies/318" for ::1 at 2022-02-01 11:19:17 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"318"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 318], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:11
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mDirector Load (0.6ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = $1 LIMIT $2[0m  [["id", 123], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:25
+  [1m[36mCast Load (3.6ms)[0m  [1m[34mSELECT "casts".* FROM "casts" INNER JOIN "casts_movies" ON "casts"."id" = "casts_movies"."cast_id" WHERE "casts_movies"."movie_id" = $1[0m  [["movie_id", 318]]
+  ↳ app/views/movies/show.html.erb:36
+  Rendered reviews/_form.html.erb (1.7ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = $1[0m  [["movie_id", 318]]
+  ↳ app/views/movies/show.html.erb:97
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:99
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:99
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:99
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:99
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:99
+  Rendered movies/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 53ms (Views: 40.9ms | ActiveRecord: 7.0ms)
+
+
