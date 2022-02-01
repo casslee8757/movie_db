@@ -26,7 +26,7 @@ before_action :check_if_logged_in
   end
 
   def edit
-    raise 'hell'
+    
     # @review = Review.find params[:id]
 
     # redirect_to login_path unless @review.user_id == @current_user.id 
