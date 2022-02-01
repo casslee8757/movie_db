@@ -250,9 +250,9 @@ c16 = Cast.create! name: 'Ana de Armas', image: 'https://encrypted-tbn2.gstatic.
 
  User.destroy_all
 
- u1 = User.create! name: 'Cassie', email: 'cass@gmail.com', password: 'chicken'
- u2 = User.create! name: 'Jessie', email: 'jess@gmail.com',password: 'chicken'
- u3 = User.create! name: 'Cass', email: 'cassie@gmail.com',password: 'chicken'
+ u1 = User.create! name: 'Cassie Lee', email: 'cass@gmail.com', password: 'chicken', username: 'casssse'
+ u2 = User.create! name: 'Jessie Kim', email: 'jess@gmail.com', password: 'chicken', username: 'jesssee'
+ u3 = User.create! name: 'Cass Lee', email: 'cassie@gmail.com', password: 'chicken', username: 'avocado'
 
 
  ####################################

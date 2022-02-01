@@ -77,12 +77,17 @@
     <hr>
 
     <% if @current_user.present? %>
-        <%= link_to new_review_path, :class => 'review_link' do  %>
+
+        <%= link_to '#', :class => 'review_link'  do  %>
             <i class="fas fa-pen"></i><br>
             Add review
         <% end %>
-        <%= render partial: 'reviews/form' %>
-    <% else %>
+
+        <div id ="review_write">
+            <%= render partial: 'reviews/form' %>
+        </div>
+        <% else %>
+
         <%= link_to 'Please log in to write a review', login_path, :class => 'review_login' %>
 
     <% end %>
@@ -98,7 +103,8 @@
             <li><%= r.content %><br><br>
             <%= r.user.name %>
             <% if @current_user.present? && r.user_id == @current_user.id %>
-                <%= link_to 'Edit'%>
+                <%= link_to 'Edit', edit_review_path(r.id) %>
+                <%= link_to 'Delete', review_path(r.id), method: 'delete' %>
             <% end %>
 
         <hr>
