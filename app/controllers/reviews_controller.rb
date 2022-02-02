@@ -62,7 +62,7 @@ before_action :check_if_logged_in
   end
 
   def edit_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:content, :rating)
   end
 
 end
