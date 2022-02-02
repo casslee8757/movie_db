@@ -77,18 +77,23 @@
     <hr>
 
     <% if @current_user.present? %>
+        <div class="add_watchlist">
+        <%= link_to profile_watchlist_path(@movie.id), id: 'watch_link', method: 'POST' do %>
+            <i class="fas fa-plus"></i><br>
+            Add to Watchlist
+        <% end %>
 
-        <%= link_to '#', :class => 'review_link'  do  %>
+        <%= link_to '#', id: 'review_link'  do  %>
             <i class="fas fa-pen"></i><br>
             Add review
         <% end %>
-
+        </div>
         <div id ="review_write">
             <%= render partial: 'reviews/form' %>
         </div>
         <% else %>
 
-        <%= link_to 'Please log in to write a review', login_path, :class => 'review_login' %>
+        <%= link_to 'Log in to write a review', login_path, :class => 'review_login' %>
 
     <% end %>
 
@@ -101,12 +106,15 @@
 
         <% @movie.reviews.each do |r|%>
             <li><%= r.content %><br><br>
-            <%= r.user.name %>
-            <% if @current_user.present? && r.user_id == @current_user.id %>
-                <%= link_to 'Edit', edit_review_path(r.id) %>
-                <%= link_to 'Delete', review_path(r.id), method: 'delete' %>
-            <% end %>
 
+            <div class="user_review">
+            <p>Username: <span id ="user_rating"><%= r.user.username %></span> | Rating: <span id ="user_rating"> <%= r.rating %></span></p>
+
+            <% if @current_user.present? && r.user_id == @current_user.id %>
+                <p id ="review_edit"><%= link_to 'Edit', edit_review_path(r.id) %>
+                <%= link_to 'Delete', review_path(r.id), method: 'delete' %></p>
+            <% end %>
+            </div>
         <hr>
         <% end %>
         </li>

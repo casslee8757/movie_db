@@ -9,7 +9,7 @@ m1 = Movie.create!(
     poster: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBBtT5hQh85AWq3REjsh86p4NbWSY9Or2v5b9L-RKOe_XzwBa9",
     trailer: "2iBFmKlO4BY",
     movie_image: "https://watchcharge.s3.amazonaws.com/uploads/2018/05/t-and-l-banner.jpg"
-)
+) 
 
 m2 = Movie.create!(
     title: "Dune",
@@ -275,4 +275,8 @@ m2.reviews << r1
 m3.reviews << r2
 m9.reviews << r5
 
+#########################################
 
+u1.movies << m1 << m3 << m10 << m13 << m15
+u2.movies << m2 << m3 << m5 << m6 << m13
+u3.movies << m4 << m5 << m7 << m8 << m12 << m15 

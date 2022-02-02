@@ -55,7 +55,7 @@ before_action :check_if_logged_in
   private
 
   def review_params
-    params.permit(:content, :movie_id)
+    params.permit(:content, :rating, :movie_id)
 
   end
 

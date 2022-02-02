@@ -18,7 +18,7 @@
 }
 
 .review_box {
-    padding: 0 0 20% 0;
+    padding-bottom: 20%;
     text-align: left;
 }
 
@@ -31,24 +31,50 @@
     color: gray;
 }
 
-.review_link {
+#review_link {
     text-decoration: none;
     color: rgb(128, 128, 128);
     
-}
-
-.review_link:hover {
-    text-decoration: none;
-    color: rgb(158, 156, 156);
     
 }
 
-/* #review_write {
+#review_write {
     display: none;
-} */
+}
+
+#review_link:hover {
+    color: rgb(158, 156, 156);
+    
+}
 
 textarea {
     width: 400px;
     height: auto;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    outline: none;
+
+}
+
+#rating {
+    padding: 0 10px 0 10px;
+}
+
+.user_review {
+    display: flex;
+    justify-content: space-between;
+}
+
+#review_edit a {
+    text-decoration: none;
+    color : rgb(130, 130, 130);
+}
+
+#review_edit a:hover {
+    color:rgb(168, 167, 167);
+}
+
+#user_rating {
+    color: gray;
 }

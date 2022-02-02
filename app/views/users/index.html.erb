@@ -1,2 +1,21 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="watch_container">
+
+    <h2>Your Ratings</h2>
+    <hr>
+
+    <ul class = "ratings">
+    <% @current_user.reviews.each do |r| %>
+    <div class="user_ui">
+    
+        <li><%= link_to image_tag(r.movie.poster), movie_show_path(r.movie.id) %></li>
+        <li>
+        <p id = "user_review_title">Your review for <%= r.movie.title %></p><br>
+        <p id = "user_review_content"><%= r.content %><br><br>
+         Your rating: <%= r.rating %></li>
+    </div>
+         <hr>
+
+    <% end %>
+
+    </ul>
+</div>

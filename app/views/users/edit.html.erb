@@ -1,2 +1,38 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="show_container">
+
+<h2>Edit profile: </h2>
+<hr>
+
+
+
+<%= form_with model: @current_user, local: true do |f| %>
+
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+    <%= f.label :email %>
+    <br>
+    <%= f.text_field :email %>
+    <br><br>
+
+    <%= f.label :username %>
+    <br>
+    <%= f.text_field :username %>
+    <br><br>
+
+    <%= f.label :password %>
+    <br>
+    <%= f.password_field :password %>
+    <br><br>
+
+    
+
+
+    <%= f.submit 'Update', :class => 'submit' %>
+
+<% end %>
+
+
+</div>

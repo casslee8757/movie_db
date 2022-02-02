@@ -20,15 +20,24 @@
         <%= link_to 'Search Movies', root_path, :class => 'home_link' %>
       </div>
       <div class="navbar_menu">
+        <div class="nav_dropdown">
         <% if @current_user.present? %>
-          <span class= "nav_font"> Welcome, <%= @current_user.name %></span>
+          <%= link_to '#', :class => "nav_font" do %>
+            Welcome, <%= @current_user.name %>
+          <% end %>
+          <div class="dropdown_content">
+            <%= link_to 'Profile', profile_path %>
+            <%= link_to 'Watchlists', profile_watchlist_path %>
+            <%= link_to 'Your ratings', profile_ratings_path %>
+          </div>
+        </div>
           |
           <%= link_to 'Log out', login_path, method: 'delete', :class => 'home_link' %>
           
           <% else %>
           <%= link_to 'Log in', login_path, :class => 'home_link' %>
           |
-          <%= link_to 'Sign up', users_new_path, :class => 'home_link' %>
+          <%= link_to 'Sign up', new_user_path, :class => 'home_link' %>
           
         <% end %>
       </div>

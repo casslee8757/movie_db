@@ -1,0 +1,72 @@
+.user_ui {
+    display: flex;
+    align-items: center;
+
+}
+
+.ratings li {
+    list-style-type: none;
+    text-align: left;
+    margin: 20px;
+}
+
+#user_review_title {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#user_review_content {
+    color: gray;
+    text-align: left;
+}
+
+.watch_container {
+    margin: 10%;
+    margin-top: 5%;
+    background-color: rgb(242, 244, 244);
+    padding: 3% 5% 5% 5%;
+}
+
+.watchlist_container {
+    display: flex;
+    text-align: left;
+    margin-right: 30px;
+    align-items: center;
+
+
+}
+
+.watch_list {
+    list-style-type: none; 
+
+}
+
+.watch_list li {
+    text-align: left;
+    margin: 20px;
+}
+
+#watch_title {
+    font-size: 25px;
+    text-align: left;
+}
+
+.add_watchlist {
+    display: flex;
+    justify-content:space-evenly;
+    text-align: center;
+}
+
+#watch_link {
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+
+}
+
+#watch_link:hover{
+    color: rgb(158, 156, 156);
+
+}
+
+

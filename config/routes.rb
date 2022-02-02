@@ -2,13 +2,7 @@ Rails.application.routes.draw do
 
  
 
-  get 'users/new'
-  get 'users/create'
-  get 'users/index'
-  get 'users/show'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/destroy'
+  
   root :to => 'movies#home'
 
   get '/movies' => 'movies#index', as: 'movie'
@@ -32,7 +26,11 @@ Rails.application.routes.draw do
 
   resources :reviews
 
-  resources :users
+  resources :users 
+  get '/profile' => 'users#show' 
+  get '/profile/ratings' => 'users#index'
+  get '/profile/watchlist' => 'users#watch'
+  post '/users/:id/watchlist' => 'users#watchlist', as: 'add_watchlist'
   
  
 

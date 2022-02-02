@@ -17,6 +17,8 @@ class Movie < ApplicationRecord
 
     #many-to-many association with casts
     has_and_belongs_to_many :casts
+    has_and_belongs_to_many :users
+
 
 
 end

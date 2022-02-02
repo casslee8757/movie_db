@@ -1,0 +1,26 @@
+<div class="watch_container">
+
+    <h2>Your Watchlist</h2>
+    <hr>
+
+    <ul class = "watch_list">
+        <% @current_user.movies.each do |m| %>
+        <div class="watchlist_container">
+            <li><%= link_to image_tag(m.poster), movie_show_path(m.id) %></li>
+            <li>
+            <p id = "watch_title"><%= m.title %></p><br>
+                <%= m.year %>
+                |
+                <%= m.time %>
+                |
+                <%= m.rating %>
+                |<br>
+                <%= m.casts.name %>
+
+            <%= m.overview %>
+            </li>
+        </div>
+            <hr>
+        <% end %>
+    </ul>
+</div>

@@ -1,87 +1,4 @@
 
-.home {
-
-    position: relative;
-    width:100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-    
-}
-
-.home_container{
-    background-image: linear-gradient(
-        rgba(192, 203, 209, 0.3),
-        rgba(145, 144, 144, 0.3)
-        ),
-    url("https://wallpapercrafter.com/th800/235445-hollywood-hills.jpg");
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    left: 0;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-h3 {
-    font-size: 70px;
-    margin-bottom: 0px;
-    margin-left:47px;
-    color:white;
-}
-
-#search {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #ccc;
-    outline: none;
-    border-radius: 30px;
-    font-size: 16px;
-    padding-left: 45px;
-    text-align: left;
-    /* margin-right:10px; */
-}
-
-.fa-search {
-    margin-left: 17px;
-    margin-top: -30px;
-    position:relative;
-    float: left;
-    z-index: 2;
-
-}
-
-.submit {
-    position: relative;
-    padding: 4px 20px;
-    color: #555;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin: 15px;
-    /* left: 17px;    */
-    /* text-align: left; */
-}
-
-.submit:hover {
-    background-color: rgb(214, 213, 213);
-}
-
-hr {
-    margin: 30px 30px 30px 0px;
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-
-}
 .index_ul li {
     list-style: none;
 }
@@ -122,8 +39,6 @@ hr {
 .movie_big_image {
     width:100%;
 }
-
-
 
 .index_image {
     transition: 0.5s;
