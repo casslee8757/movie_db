@@ -13,7 +13,9 @@ class UsersController < ApplicationController
       # Forward the uploaded image on to Cloudinary (using the gem):
       response = Cloudinary::Uploader.upload params[:user][:user_image]
       p response  # so we can see what the response looks like
-      @user.user_image = response['public_id'] # add to the item we are saving    
+      @user.user_image = response['public_id'] # add to the item we are saving
+    else 
+      @user.user_imag = 'https://www.pngfind.com/pngs/m/676-6764065_default-profile-picture-transparent-hd-png-download.png'    
     end  # upload check
 
     @user.save
@@ -51,11 +53,26 @@ class UsersController < ApplicationController
 
   def update
 
+    @user = User.find params[:id]
+
+    if params[:user][:user_image].present?
+      # Forward the uploaded image on to Cloudinary (using the gem):
+      response = Cloudinary::Uploader.upload params[:user][:user_image]
+      p response  # so we can see what the response looks like
+      @user.user_image = response['public_id'] # add to the item we are saving   
+    else 
+      @user.user_imag = 'https://www.pngfind.com/pngs/m/676-6764065_default-profile-picture-transparent-hd-png-download.png'
+    end  # upload check
+  
+
+
     if @current_user.update user_params
       redirect_to profile_path(@current_user)
     else
       render :edit
     end
+
+    
 
   end
 
@@ -65,7 +82,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :username, :password, :user_image)
+    params.require(:user).permit(:name, :email, :username, :password )
   end
 
 
