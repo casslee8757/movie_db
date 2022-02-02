@@ -30,22 +30,24 @@ before_action :check_if_logged_in
 
     @review = Review.find params[:id]
     
+    #checking the user is allowed to edit the review
     redirect_to login_path unless @review.user_id == @current_user.id
 
   end
 
   def update
     @review = Review.find params[:id]
-    @review.update edit_params
-    redirect_to movie_show_path(@review.movie_id)
-  
+    
+    # if the logged in user is not the owner, redirect to login path 
     if @review.user_id != @current_user.id  
       redirect_to login_path
-
       return
     end
 
-  end
+    @review.update edit_params
+    redirect_to movie_show_path(@review.movie_id)
+
+  end #update
 
   def destroy
     @review = Review.destroy params[:id]

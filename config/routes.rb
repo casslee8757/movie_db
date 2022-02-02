@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
- 
-
-  
   root :to => 'movies#home'
 
   get '/movies' => 'movies#index', as: 'movie'

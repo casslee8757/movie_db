@@ -33,8 +33,6 @@
     text-align: left;
     margin-right: 30px;
     align-items: center;
-
-
 }
 
 .watch_list {
@@ -69,4 +67,38 @@
 
 }
 
+#user_user_image {
+    border: none;
+}
 
+#login_error_message {
+    color: red
+}
+
+li {
+    list-style-type: none;
+}
+
+.profile_detail {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    
+}
+#personal_detail {
+    font-weight: bolder;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+
+#personal_content {
+    text-align: left;
+}
+
+#user_image {
+    width: 35px;
+    margin-top: 20px;
+}

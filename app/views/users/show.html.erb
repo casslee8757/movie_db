@@ -1,21 +1,20 @@
 <div class="show_container">
 
-<h2>User details</h2>
+    <h2>Personal details</h2>
+    <hr>
 
-<hr>
+    <div class="profile_detail">
 
-<p>
- User name: <%= @current_user.name %>
-</p>
+    <%= cl_image_tag @current_user.user_image %>
+    <p id = "personal_content">
+        <span id ="personal_detail">User name </span> <%= @current_user.name %><br>
+        <span id ="personal_detail">User email</span> <%= @current_user.email %><br>
+        <span id ="personal_detail">User username</span> <%= @current_user.username %>
+    </p>
 
-<p>
-User email: <%= @current_user.email %><br>
-</p>
-<p>
-User username: <%= @current_user.username %><br>
-</p>
+    </div>
 
-<%= link_to 'Edit', edit_user_path(@current_user.id) %>
+    <%= link_to 'Edit', edit_user_path(@current_user.id) %>
 
 </div>
 

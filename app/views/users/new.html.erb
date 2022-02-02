@@ -4,9 +4,19 @@
 
     <hr>
 
+<% if @user.errors.any? %>
+    <strong> Please correct the following errors: </strong>
     
+        <% @user.errors.full_messages.each do |e| %>
+        <li>
+            <p id = "login_error_message"><%= e %></p>
+        </li>
+        <% end %>
+    
+    <hr>
+<% end %>
 
-<%= form_with model: @user, local: true do |f| %>
+<%= form_with model: @user, local: true, :html => { multipart: true } do |f| %>
 
     <%= f.label :name %>
     <br>
@@ -26,6 +36,11 @@
     <%= f.label :password %>
     <br>
     <%= f.password_field :password %>
+    <br><br>
+
+    <%= f.label 'Image' %>
+    <br>
+    <%= f.file_field :user_image %>
     <br><br>
 
     

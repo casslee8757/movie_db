@@ -3,22 +3,23 @@ class ApplicationController < ActionController::Base
 
     def fetch_user
 
-        if session[:user_id].present?
+        if session[:user_id].present? #if hash user id is not nil
             @current_user = User.find_by id: session[:user_id]
-        end
+        end #session check 
 
         session[:user_id] = nil unless @current_user.present?
+        # if no such user then delete the session 
 
-    end
+    end #fetch_user
 
     def check_if_logged_in
 
         unless @current_user.present?
-            flash[:error] = 'You must be logged in to write a review'
+            flash[:error] = "You don't have permission to access, please log in"
             redirect_to login_path
-        end
-    end
+        end # login check 
+    end # check_if_logged_in
     
 
 
-end
+end # class ApplicationController

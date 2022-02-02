@@ -3,9 +3,7 @@
 <h2>Edit profile: </h2>
 <hr>
 
-
-
-<%= form_with model: @current_user, local: true do |f| %>
+<%= form_with model: @current_user, local: true, :html => { multipart: true } do |f| %>
 
     <%= f.label :name %>
     <br>
