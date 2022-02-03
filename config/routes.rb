@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/movies' => 'movies#index', as: 'movie'
   get '/movies/:id' => 'movies#show', as: 'movie_show'
+  post '/movies/:id/watchlist' => 'movies#watchlist', as: 'movie_add_watchlist'
 
   #####################
 

@@ -1,20 +1,28 @@
 <div class="show_container">
 
-
-<% if flash[:error] %>
+    <% if flash[:error] %>
     <br>
-    <strong>
-        <p id = 'login_error_message'><%= flash[:error]  %></p>
-    </strong>
+        <div class="error_message">
+        <strong>
+            <p id = 'login_error_message'><%= flash[:error]  %></p>
+        </strong>
+        </div>
+        <% elsif flash[:notice] %>
+        <div class="notice_message">
+        <strong>
+            <p id = 'notice_message'><%= flash[:notice]  %></p>
+        </strong>
+        </div>
+    <% end %>
     <br>
-    <br>
-<% end %>
-
 
     <%= image_tag @movie.movie_image, :class => 'movie_big_image' %>
     <hr>
 
-    <h2><%= @movie.title %></h2>
+    <h2>
+    <%= @movie.title %>
+    </h2>
+
     <hr>
 
     <div class="show_title">
@@ -46,13 +54,12 @@
     <strong>Casts</strong><br><br>
     <div class="cast_list">
         <% @movie.casts.each do |c|%>
-        <%= link_to cast_path(c.id) do %>
-
-        <div class="cast_list2">
-            <%= image_tag(c.image, :class => 'cast_thumbnail') %><br>
-            <%= c.name %>
+            <%= link_to cast_path(c.id) do %>
+                <div class="cast_list2">
+                    <%= image_tag(c.image, :class => 'cast_thumbnail') %><br>
+                    <%= c.name %>
             <% end %>
-            </div>
+                </div>
         <% end %>   
     </p>
     </div>
@@ -61,7 +68,7 @@
 
     <h2>Movie Info</h2><br>
 
-        <div class="movie_info">
+    <div class="movie_info">
         <p>
         <strong>Release Year:</strong>
         <%= @movie.year %>
@@ -77,6 +84,12 @@
         <%= @movie.rating %>
         </p>
 
+        <p>
+        <strong>User Rating:</strong>
+        <%= @movie_cal.to_f %>
+        
+        </p>
+
     </div>
     <br>
     <p id ="overview_text">
@@ -89,21 +102,21 @@
 
     <% if @current_user.present? %>
         <div class="add_watchlist">
-        <%= link_to add_watchlist_path(@movie.id), id: 'watch_link', method: 'POST' do %>
-            <i class="fas fa-plus"></i><br>
-            Add to Watchlist
-        <% end %>
+            <%= link_to add_watchlist_path(@movie.id), id: 'watch_link', method: 'POST' do %>
+                <i class="fas fa-plus"></i><br>
+                Add to Watchlist
+            <% end %>
 
-        <%= link_to '#', id: 'review_link'  do  %>
-            <i class="fas fa-pen"></i><br>
-            Add review
-        <% end %>
+            <%= link_to '#', id: 'review_link'  do  %>
+                <i class="fas fa-pen"></i><br>
+                Add review
+            <% end %>
         </div>
         <div id ="review_write">
             <%= render partial: 'reviews/form' %>
         </div>
-        <% else %>
-            <%= link_to 'Log in to write a review', login_path, :class => 'review_login' %>
+            <% else %>
+        <%= link_to 'Log in to write a review', login_path, :class => 'review_login' %>
 
     <% end %>
 
@@ -116,19 +129,20 @@
 
         <% @movie.reviews.each do |r|%>
             <li><%= r.content %><br><br>
-
             <div class="user_review">
-            <p><%= cl_image_tag r.user.user_image, :id => 'user_image' %> <span id ="user_rating"><%= r.user.username %></span> | Rating: <span id ="user_rating"> <%= r.rating %></span></p>
+                <p><%= cl_image_tag r.user.user_image, :id => 'user_image' %> 
+                <span id ="user_rating"><%= r.user.username %></span> 
+                | Rating: <span id ="user_rating"> <%= r.rating %></span></p>
 
-            <% if @current_user.present? && r.user_id == @current_user.id %>
-                <p id ="review_edit"><%= link_to 'Edit', edit_review_path(r.id) %>|
-                <%= link_to 'Delete', review_path(r.id), method: 'delete' %></p>
-            <% end %>
+                <% if @current_user.present? && r.user_id == @current_user.id %>
+                    <p id ="review_edit"><%= link_to 'Edit', edit_review_path(r.id) %>|
+                    <%= link_to 'Delete', review_path(r.id), method: 'delete' %></p>
+                <% end %>
             </div>
         <hr>
         <% end %>
-        </li>
-        </ul>
-        </div>
+            </li>
+    </ul>
+    </div>
 
 </div>

@@ -1,28 +1,24 @@
-nclass ReviewsController < ApplicationController
+class ReviewsController < ApplicationController
 
 before_action :check_if_logged_in
 
   def new
-    # @review = Review.new
   end
 
   def create
     
     @review = Review.new review_params
     @review.user_id = @current_user.id
-     
-
+    #check if the user already written the review 
     if @current_user.reviews.present?
-      
       redirect_to movie_show_path(params[:movie_id])
       flash[:error] = 'You have already written a review for this movie'
-
     else
       render :new
       @review.save
-    end
+    end #if statement 
 
-  end
+  end #create
 
   def index
   end
@@ -33,7 +29,6 @@ before_action :check_if_logged_in
   def edit
 
     @review = Review.find params[:id]
-    
     #checking the user is allowed to edit the review
     redirect_to login_path unless @review.user_id == @current_user.id
 
@@ -41,12 +36,11 @@ before_action :check_if_logged_in
 
   def update
     @review = Review.find params[:id]
-    
     # if the logged in user is not the owner, redirect to login path 
     if @review.user_id != @current_user.id  
       redirect_to login_path
       return
-    end
+    end #if statement 
 
     @review.update edit_params
     redirect_to movie_show_path(@review.movie_id)

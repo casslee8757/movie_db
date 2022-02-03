@@ -181,6 +181,9 @@ input {
     border-radius: 4px;
     text-align: left;
     padding: 3px;
+}
 
-
+.error_message {
+    background-color: rgb(250, 226, 226);
+    padding: 1%;
 }

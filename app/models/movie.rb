@@ -1,6 +1,5 @@
 class Movie < ApplicationRecord
 
-
     def self.search(query)
         if query
             where(['title ILIKE ?', "%#{query}%"])
@@ -9,8 +8,7 @@ class Movie < ApplicationRecord
         end
     end
 
-    
-
+   
 
     belongs_to :director, optional: true
     has_many :reviews

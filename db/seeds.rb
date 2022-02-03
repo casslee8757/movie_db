@@ -259,11 +259,11 @@ c16 = Cast.create! name: 'Ana de Armas', image: 'https://encrypted-tbn2.gstatic.
 
  Review.destroy_all
 
- r1 = Review.create! content: 'When the anticipation is feverish, it sets up movies to disappoint and fail. This long-awaited movie smashes those expectations.', rating: 4.5
- r2 = Review.create! content: "Pulp Fiction actually uses its non-linear story telling structure to hinge its entire complex narrative around one man's redemption in light of a divine intervention.", rating: 5
- r3 = Review.create! content: "Thelma & Louise isn't only a movie, it's also a journey. In some dark night of your distant past, you might once have dreamed about taking it.", rating: 5
- r4 = Review.create! content: 'This unexpected delight, which travels at top speed from the doldrums to the Grand Canyon, is moreover blessed with two high-octane performances.', rating: 3.5
- r5 = Review.create! content: 'Just saw this movie for the first time today. Loved it!', rating: 4.5
+ r1 = Review.create! content: 'When the anticipation is feverish, it sets up movies to disappoint and fail. This long-awaited movie smashes those expectations.', rating: 8.5
+ r2 = Review.create! content: "Pulp Fiction actually uses its non-linear story telling structure to hinge its entire complex narrative around one man's redemption in light of a divine intervention.", rating: 10
+ r3 = Review.create! content: "Thelma & Louise isn't only a movie, it's also a journey. In some dark night of your distant past, you might once have dreamed about taking it.", rating: 10
+ r4 = Review.create! content: 'This unexpected delight, which travels at top speed from the doldrums to the Grand Canyon, is moreover blessed with two high-octane performances.', rating: 7
+ r5 = Review.create! content: 'Just saw this movie for the first time today. Loved it!', rating: 9
 
 
 u1.reviews << r1 << r2 << r4
