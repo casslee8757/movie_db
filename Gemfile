@@ -51,6 +51,3 @@ end
 
 gem 'pry-rails'
 gem 'cloudinary'
-
-gem 'bootstrap'
-gem 'jquery-rails'
