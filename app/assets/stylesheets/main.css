@@ -141,6 +141,10 @@ hr {
 .index_container {
     margin: 10%;
     background-color: white;
+    background-color: rgb(242, 244, 244);
+    padding: 3% 5% 5% 5%;
+
+
 }
 
 .nav_dropdown {

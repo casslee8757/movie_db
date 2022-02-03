@@ -1,4 +1,4 @@
-<div class="show_container">
+<div class="index_container">
 
     <h2>Results for <%= params[:search] %> </h2>
 
@@ -18,8 +18,12 @@
                 <p id="index_name"><%= c.name %>|</p>
                 
                 <% end %>
-                </div>
 
+                
+                </div>
+                <%= link_to 'movie_add_path' do %>
+                <i class="fas fa-plus"></i>
+                <% end %>
             </div>
 
             <hr>

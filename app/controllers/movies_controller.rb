@@ -11,6 +11,8 @@ class MoviesController < ApplicationController
 
   end
 
-
+  def watchlist
+    @movie = Movie.search params[:search]
+  end
 
 end

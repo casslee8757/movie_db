@@ -8,7 +8,7 @@
         <%= f.text_area :content, placeholder: 'What do you think about the movie?', :class => 'review_box' %>
         <br>
         <%= f.label :rating  %><br>
-        <%= f.number_field :rating, min: '0', max: '10'%>
+        <%= f.number_field :rating, min: 0, max: 10, step: :any %>
         <br><br>
         <%= f.hidden_field :movie_id, value: params[:id] %>
         <br>

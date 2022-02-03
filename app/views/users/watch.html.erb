@@ -19,6 +19,9 @@
 
             <%= m.overview %>
             </li>
+            <%= link_to delete_from_watchlist_path(m.id), method: 'delete' do %>
+            <i class="fas fa-minus"></i>
+            <% end %>
         </div>
             <hr>
         <% end %>

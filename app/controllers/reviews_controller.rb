@@ -1,4 +1,4 @@
-class ReviewsController < ApplicationController
+nclass ReviewsController < ApplicationController
 
 before_action :check_if_logged_in
 
@@ -10,12 +10,16 @@ before_action :check_if_logged_in
     
     @review = Review.new review_params
     @review.user_id = @current_user.id
-    @review.save 
+     
 
-    if @review.persisted?
+    if @current_user.reviews.present?
+      
       redirect_to movie_show_path(params[:movie_id])
+      flash[:error] = 'You have already written a review for this movie'
+
     else
       render :new
+      @review.save
     end
 
   end

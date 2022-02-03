@@ -39,12 +39,23 @@ class UsersController < ApplicationController
     
   end
 
-  def watchlist
-    @user = User.find params[:id]
-    
-    # @current_user.movies = Current_user.find params[:id]
-    # @current_user.movies << @movies
-    # redirect_to profile_watchlist_path
+  def add_to_watchlist
+    movie = Movie.find params[:movie_id]
+  
+    if @current_user.movies.include? movie
+      redirect_to movie_show_path(params[:movie_id])
+      flash[:error] = 'You have already added this movie in your Watchlist'
+    else
+      @current_user.movies << movie
+      redirect_to profile_watchlist_path
+    end # current_user.movie.includes?
+
+  end # add_to_watchlist
+
+  def delete_from_watchlist
+    movie = Movie.find params[:movie_id]
+    @current_user.movies.delete(movie)
+    redirect_to profile_watchlist_path
   end
 
   def edit
@@ -63,8 +74,6 @@ class UsersController < ApplicationController
     else 
       @current_user.user_image = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/271deea8-e28c-41a3-aaf5-2913f5f48be6/de7834s-6515bd40-8b2c-4dc6-a843-5ac1a95a8b55.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI3MWRlZWE4LWUyOGMtNDFhMy1hYWY1LTI5MTNmNWY0OGJlNlwvZGU3ODM0cy02NTE1YmQ0MC04YjJjLTRkYzYtYTg0My01YWMxYTk1YThiNTUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BopkDn1ptIwbmcKHdAOlYHyAOOACXW0Zfgbs0-6BY-E'
     end  # upload check
-  
-
 
     if @current_user.update user_params
       redirect_to profile_path(@current_user)
@@ -72,11 +81,11 @@ class UsersController < ApplicationController
       render :edit
     end
 
-    
-
-  end
+  end # update
 
   def destroy
+    # @current_user = User.destroy params[:id]
+    # redirect_to root_path
   end
 
   private

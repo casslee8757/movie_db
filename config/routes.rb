@@ -27,7 +27,8 @@ Rails.application.routes.draw do
   get '/profile' => 'users#show' 
   get '/profile/ratings' => 'users#index'
   get '/profile/watchlist' => 'users#watch'
-  post '/users/:id/watchlist' => 'users#watchlist', as: 'add_watchlist'
+  post '/users/:movie_id/watchlist' => 'users#add_to_watchlist', as: 'add_watchlist'
+  delete '/users/:movie_id/watchlist' => 'users#delete_from_watchlist', as: 'delete_from_watchlist'
   
  
 

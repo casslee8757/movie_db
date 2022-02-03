@@ -1,10 +1,22 @@
 <div class="show_container">
 
+
+<% if flash[:error] %>
+    <br>
+    <strong>
+        <p id = 'login_error_message'><%= flash[:error]  %></p>
+    </strong>
+    <br>
+    <br>
+<% end %>
+
+
     <%= image_tag @movie.movie_image, :class => 'movie_big_image' %>
     <hr>
 
     <h2><%= @movie.title %></h2>
     <hr>
+
     <div class="show_title">
         <p id= "show_text">Poster <br><br>
         <%= image_tag @movie.poster, :class => 'movie_small_image' %>
@@ -41,8 +53,7 @@
             <%= c.name %>
             <% end %>
             </div>
-        <% end %>
-        
+        <% end %>   
     </p>
     </div>
 
@@ -78,7 +89,7 @@
 
     <% if @current_user.present? %>
         <div class="add_watchlist">
-        <%= link_to profile_watchlist_path(@movie.id), id: 'watch_link', method: 'POST' do %>
+        <%= link_to add_watchlist_path(@movie.id), id: 'watch_link', method: 'POST' do %>
             <i class="fas fa-plus"></i><br>
             Add to Watchlist
         <% end %>
