@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 
-  before_action :check_if_logged_in, except: [:index, :show]
+  before_action :check_if_logged_in, only: [:watchlist]
 
   def index
 
