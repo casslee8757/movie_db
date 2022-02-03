@@ -64,6 +64,7 @@ textarea {
 .user_review {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 #review_edit a {

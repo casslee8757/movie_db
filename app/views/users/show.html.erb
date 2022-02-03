@@ -5,7 +5,7 @@
 
     <div class="profile_detail">
 
-    <%= cl_image_tag @current_user.user_image %>
+    <%= cl_image_tag @current_user.user_image, :id => 'personal_image' %>
     <p id = "personal_content">
         <span id ="personal_detail">User name </span> <%= @current_user.name %><br>
         <span id ="personal_detail">User email</span> <%= @current_user.email %><br>
@@ -13,8 +13,8 @@
     </p>
 
     </div>
-
-    <%= link_to 'Edit', edit_user_path(@current_user.id) %>
+    <br>
+    <%= link_to 'Edit', edit_user_path(@current_user.id),:class => 'submit' %>
 
 </div>
 

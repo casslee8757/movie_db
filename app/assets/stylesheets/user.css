@@ -37,7 +37,6 @@
 
 .watch_list {
     list-style-type: none; 
-
 }
 
 .watch_list li {
@@ -82,10 +81,12 @@ li {
 .profile_detail {
     background-color: white;
     border: 1px solid #ccc;
-    padding: 5%;
+    padding: 4%;
     display: flex;
     align-items: center;
     text-align: left;
+    justify-content: center;
+    margin: 0 7% 0 7%;
     
 }
 #personal_detail {
@@ -103,9 +104,6 @@ li {
     margin-top: 20px;
 }
 
-#user_user_image {
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    text-align: right;
-
+#personal_image {
+    width: 100px;
 }

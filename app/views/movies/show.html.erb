@@ -98,6 +98,7 @@
 
     <hr>
 
+
     <h2>User reviews</h2>
     <div class="review_content">
     <ul>
@@ -109,7 +110,7 @@
             <p><%= cl_image_tag r.user.user_image, :id => 'user_image' %> <span id ="user_rating"><%= r.user.username %></span> | Rating: <span id ="user_rating"> <%= r.rating %></span></p>
 
             <% if @current_user.present? && r.user_id == @current_user.id %>
-                <p id ="review_edit"><%= link_to 'Edit', edit_review_path(r.id) %>
+                <p id ="review_edit"><%= link_to 'Edit', edit_review_path(r.id) %>|
                 <%= link_to 'Delete', review_path(r.id), method: 'delete' %></p>
             <% end %>
             </div>

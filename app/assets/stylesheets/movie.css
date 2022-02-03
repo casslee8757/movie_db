@@ -1,4 +1,5 @@
 
+
 .index_ul li {
     list-style: none;
 }
@@ -60,7 +61,9 @@
 }
 
 h2 {
-font-size: 40px;
+font-size: 50px;
+/* font-family: 'Noto Sans', sans-serif; */
+font-style: italic;
 }
 
 #show_text {
