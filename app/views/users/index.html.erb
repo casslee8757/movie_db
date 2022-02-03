@@ -12,6 +12,8 @@
         <p id = "user_review_title">Your review for <%= r.movie.title %></p><br>
         <p id = "user_review_content"><%= r.content %><br><br>
          Your rating: <%= r.rating %></li>
+
+         <p id ="review_edit"><%= link_to 'Edit', edit_review_path(r.id) %><br><%= link_to 'Delete', review_path(r.id), method: 'delete' %></p>
     </div>
          <hr>
 
