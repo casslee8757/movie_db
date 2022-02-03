@@ -1,13 +1,18 @@
 <div class="show_container">
 
-    <h1><%= @director.name %></h1>
+    <h2><%= @director.name %></h2>
     <hr>
     <%= image_tag @director.image %>
     <hr>
-    <ul>
-    <% @director.movies.each do |d|%>
-    <li><%= link_to d.title, movie_show_path(d.id) %></li>
+    <p id ="filmo">Filmography</p>
+    <hr>
+        <% @director.movies.each do |d|%>
+    
+        <%= link_to movie_show_path(d.id), :class => 'casts_detail' do %>
+        <%= image_tag(d.poster, :class => 'movie_smaller_image') %>
+        <p><%= d.title %></p>
+        <% end %>
+    <hr>
     <% end %>
-    </ul>
 
 </div>

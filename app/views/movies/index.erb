@@ -1,5 +1,15 @@
 <div class="index_container">
 
+    <% if flash[:error] %>
+    <br>
+        <div class="error_message">
+        <strong>
+            <p id = 'login_error_message'><%= flash[:error]  %></p>
+        </strong>
+        </div>
+       
+    <% end %>
+
     <h2>Results for <%= params[:search] %> </h2>
 
     <hr>

@@ -87,3 +87,17 @@ font-style: italic;
 #overview_text {
     text-align: left;
 }
+
+.casts_detail {
+    text-decoration: none;
+    color: gray;
+}
+
+#filmo {
+    font-size: 20px;
+}
+
+.movie_smaller_image {
+    width: 80px;
+}
+

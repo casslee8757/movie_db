@@ -8,14 +8,19 @@ before_action :check_if_logged_in
   def create
     
     @review = Review.new review_params
+    movie = Movie.find params[:movie_id]
     @review.user_id = @current_user.id
-    #check if the user already written the review 
-    if @current_user.reviews.present?
+    
+    # check if the user already written the review 
+    if @current_user.reviews.include? movie
+      # raise 'hell'
       redirect_to movie_show_path(params[:movie_id])
       flash[:error] = 'You have already written a review for this movie'
     else
-      render :new
+      # raise 'hell'
+      
       @review.save
+      redirect_to movie_show_path(params[:movie_id])
     end #if statement 
 
   end #create
@@ -40,7 +45,7 @@ before_action :check_if_logged_in
     if @review.user_id != @current_user.id  
       redirect_to login_path
       return
-    end #if statement 
+    end #if statement
 
     @review.update edit_params
     redirect_to movie_show_path(@review.movie_id)

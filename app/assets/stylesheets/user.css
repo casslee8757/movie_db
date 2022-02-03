@@ -107,3 +107,13 @@ li {
 #personal_image {
     width: 100px;
 }
+
+.delete_icon {
+    color: black;
+    
+}
+
+.delete_icon:hover {
+    color: gray;
+    
+}
