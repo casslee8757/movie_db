@@ -8,21 +8,12 @@ before_action :check_if_logged_in
   def create
     
     @review = Review.new review_params
-    movie = Movie.find params[:movie_id]
     @review.user_id = @current_user.id
-    
-    # check if the user already written the review 
-    if @current_user.reviews.include? movie
-      # raise 'hell'
-      redirect_to movie_show_path(params[:movie_id])
-      flash[:error] = 'You have already written a review for this movie'
-    else
-      # raise 'hell'
-      
-      @review.save
-      redirect_to movie_show_path(params[:movie_id])
-    end #if statement 
+    @review.save
+    redirect_to movie_show_path(params[:movie_id])
 
+    
+  
   end #create
 
   def index

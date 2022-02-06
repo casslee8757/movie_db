@@ -6,5 +6,6 @@ class Review < ApplicationRecord
 
     
     validates :content, length: {minimum: 2}
+    validates :movie_id, :uniqueness => true
 
 end

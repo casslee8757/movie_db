@@ -1,5 +1,6 @@
 class Movie < ApplicationRecord
 
+    #search the input by the user by passing the variable from the search bar 
     def self.search(query)
         if query
             where(['title ILIKE ?', "%#{query}%"])
@@ -7,8 +8,6 @@ class Movie < ApplicationRecord
             all
         end
     end
-
-   
 
     belongs_to :director, optional: true
     has_many :reviews

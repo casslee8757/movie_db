@@ -9,6 +9,9 @@ You can search, write a review and rate a movie by clicking the link : [Movie Se
 ***
 
 The outline of the website is below. 
+![Image](/assets/images/1.png)
+
+
 
 1. Home page<br> 
 You can simply begin by typing in the title of a movie in the search box in the middle. 
@@ -24,4 +27,9 @@ You can see the details of the movie on this page. If you want to explore the fi
    You can expand your experience at the Movie Search site by signing up. Click the sign-up button in the top right corner. You can upload your profile image by clicking the choose file button but it's not compulsory. If you sign up without uploading the user image, you will still get a default user image. 
 <br>
 4.1 User Section <br>
-When you hover over the top nav bar that says Welcome, 'Your name', just hover over the text and you will see 3 menus. In the profile section, you can see **your** details and you can also edit your details by clicking the edit button. 
+When you hover over the top nav bar that says Welcome, 'Your name', you will see 3 menus. In the profile section, you can see your details and the edit button. You can also edit your details by clicking the edit button. 
+<br>
+4.2<br>
+Below the usre profile, you can see 'Watchlist' and 'Your Rating' menu. You can find your history of reviews in Your Rating menu and your history of watchlist in Watchlist menu. In both features, you can edit the review and you also can go back to the movie detail page by clicking the movie image.  
+<br>
+
