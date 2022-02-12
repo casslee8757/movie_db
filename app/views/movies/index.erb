@@ -18,18 +18,21 @@
                 <% end %>
 
                 </div>
-                <% if @current_user.movies.include? movie %>
-                    <%= link_to movie_delete_watchlist_path(movie.id), method: 'delete' do %>
-                    <i class="fas fa-minus"></i>
-                    <% end %>
-                    
-                <% else %>
-                    <%= link_to movie_add_watchlist_path(movie.id), method: 'POST' do %>
-                        <i class="fas fa-plus"></i>
+                <% if @current_user.present?%>
+                    <% if @current_user.movies.include? movie %>
+                        <%= link_to movie_delete_watchlist_path(movie.id), method: 'delete' do %>
+                        <i class="fas fa-minus"></i>
+                        <% end %>
+                        
+                    <% else %>
+                        <%= link_to movie_add_watchlist_path(movie.id), method: 'POST' do %>
+                            <i class="fas fa-plus"></i>
+
+                        <% end %>
 
                     <% end %>
-
                 <% end %>
+                
             </div>
 
             <hr>
