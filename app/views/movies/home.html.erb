@@ -1,13 +1,24 @@
+<script>
+    const validateSearch = function(){
+        const inputNode = document.querySelector('#search')
+        
+        if (inputNode.value === ''){
+            event.preventDefault()
+        }
+        
+    }
+</script>
+
 <div class="home_container">
     <div class="home">
 
         <h3>Search your movie</h3><br>
 
         <%= form_tag movie_path, :method => 'get' do %>
-            <%= text_field_tag(:search, params[:search], placeholder: "Search by Title")%>
+            <%= text_field_tag(:search, params[:search], placeholder: "Search by Title" )%>
             <span class="fas fa-search"></span>
             
-            <%= submit_tag "Search", :class => 'submit' %>
+            <%= button_tag "Search", :class => 'submit', onclick: "validateSearch()" %>
         <% end %>
 
     </div>
