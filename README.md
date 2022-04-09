@@ -36,7 +36,7 @@ When you hover over the top nav bar that says Welcome, 'Your name', you will see
 Below the usre profile, you can see 'Watchlist' and 'Your Rating' menu. You can find your history of reviews in Your Rating menu and your history of watchlist in Watchlist menu. In both features, you can edit the review and you also can go back to the movie detail page by clicking the movie image.  
 <br>
 
-The index of movies are followings:
+The index of movies are following:
 
 1. Thema & Louise
 2. Dune
