@@ -12,18 +12,18 @@ You can search, write a review and rate a movie by clicking the link : [Movie Se
 
 1. Home page<br> 
 You can simply begin by typing in the title of a movie in the search box in the middle.
-<img src="app/assets/images/1.png" alt="movie" width="500"/>
+<img src="app/assets/images/1.png" alt="movie" width="700"/>
 
 <br>
 2. Movie index page<br>
 When it goes to the index page of the searched movie, you can see the details of the movie by clicking the title or image of the movie. You can add the movie to the watchlist by clicking the plus button on the very right-hand side and this feature is restricted to logged-in users.
-<img src="app/assets/images/2.png" alt="movie" width="500"/>
+<img src="app/assets/images/2.png" alt="movie" width="700"/>
 <br>
 
 3. Movie detail page <br>
 You can see the details of the movie on this page. If you want to explore the filmography of the director and casts, you can simply click their name and it will direct you to the page where you can see the list of their movies. I have placed 2 rating systems in the 'Movie Info', the first rating is from the movie rating website and the second rating is the average of the users rating. Just below the 'movie info' section is the user review section and this is another feature for logged in users.
-<img src="app/assets/images/3.png" alt="movie" width="300"/>
-<img src="app/assets/images/4.png" alt="movie" width="300"/>
+<img src="app/assets/images/3.png" alt="movie" width="500"/>
+<img src="app/assets/images/4.png" alt="movie" width="500"/>
 <br>
 
 4. Sign-up feature <br>
